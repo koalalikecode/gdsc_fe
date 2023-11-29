@@ -1,0 +1,25 @@
+.comment_group {
+    padding: 0.5rem;
+    border-radius: 10px;
+    max-width: 100%;
+}
+.comment_link {
+    color: blue;
+}
+.comment_author {
+    margin-bottom: 0.5rem;
+    color: #2F4858;
+    font-size: large;
+    font-weight: bold;
+}
+.comment_content {
+    margin-bottom: 0.5rem;
+}
+.comment_muted {
+    font-size: medium;
+    font-weight: 300;
+}
+.comment_form_label {
+    color: black;
+    margin-bottom: 0.5rem;
+}

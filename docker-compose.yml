@@ -1,0 +1,61 @@
+version: "3"
+services:
+  nextjs:
+    image: quandat10/dsc_front_web
+    ports:
+      - 3000:3000
+    networks:
+      - mynet    
+  nginx:
+    image: quandat10/nginx_gdsc
+    ports:
+      - 80:80
+    depends_on:
+      - nextjs
+      - web
+      - phpmyadmin
+    networks:
+      - mynet      
+  dscdb:
+    container_name: mysql
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=trung289123
+      - MYSQL_DATABASE=dsc_hust_db
+      - MYSQL_USER=trung
+      - MYSQL_PASSWORD=trung289123
+    ports:
+      - 3307:3306
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - mynet    
+  web:
+    image: trung2891/dsc-hust-app-api
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://dscdb:3306/dsc_hust_db?autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true
+    ports:
+      - "8000:8000"
+    depends_on:
+      - dscdb
+    networks:
+      - mynet  
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8888:80'
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql
+    depends_on:
+      - dscdb
+    restart: always
+    networks:
+      - mynet
+
+volumes:
+  mysql-data:
+networks:
+    mynet:

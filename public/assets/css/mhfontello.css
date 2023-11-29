@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "mhfontello";
+  src: url("../font/mhfontello.eot?63661906");
+  src: url("../font/mhfontello.eot?63661906#iefix") format("embedded-opentype"),
+    url("../font/mhfontello.woff2?63661906") format("woff2"),
+    url("../font/mhfontello.woff?63661906") format("woff"),
+    url("../font/mhfontello.ttf?63661906") format("truetype"),
+    url("../font/mhfontello.svg?63661906#mhfontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'mhfontello';
+    src: url('../font/mhfontello.svg?63661906#mhfontello') format('svg');
+  }
+}
+*/
+
+[class^="mh-icon-"]:before,
+[class*=" mh-icon-"]:before {
+  font-family: "mhfontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.mh-icon-download:before {
+  content: "\e800";
+} /* 'î €' */
+.mh-icon-mail:before {
+  content: "\e801";
+} /* 'î ' */
+.mh-icon-heart:before {
+  content: "\e802";
+} /* 'î ‚' */
+.mh-icon-link:before {
+  content: "\e803";
+} /* 'î ƒ' */
+.mh-icon-thumbs-up:before {
+  content: "\e804";
+} /* 'î „' */
+.mh-icon-search:before {
+  content: "\e805";
+} /* 'î …' */
+.mh-icon-cancel:before {
+  content: "\e806";
+} /* 'î †' */
+.mh-icon-plus:before {
+  content: "\e807";
+} /* 'î ‡' */
+.mh-icon-forward:before {
+  content: "\e808";
+} /* 'î ˆ' */
+.mh-icon-zoom-in:before {
+  content: "\e809";
+} /* 'î ‰' */
+.mh-icon-right-open:before {
+  content: "\e80a";
+} /* 'î ' */
+.mh-icon-left-open:before {
+  content: "\e80b";
+} /* 'î ‹' */
+.mh-icon-close:before {
+  content: "\e80c";
+} /* 'î Œ' */
+.mh-icon-ok:before {
+  content: "\e80d";
+} /* 'î ' */
+.mh-icon-right:before {
+  content: "\e80e";
+} /* 'î ' */
+.mh-icon-left:before {
+  content: "\e80f";
+} /* 'î ' */
+.mh-icon-play:before {
+  content: "\e810";
+} /* 'î ' */
+.mh-icon-pause:before {
+  content: "\e811";
+} /* 'î ‘' */
+.mh-icon-eye:before {
+  content: "\e812";
+} /* 'î ’' */
+.mh-icon-camera:before {
+  content: "\e813";
+} /* 'î “' */
+.mh-icon-spin1:before {
+  content: "\e830";
+} /* 'î °' */
+.mh-icon-spin2:before {
+  content: "\e831";
+} /* 'î ±' */
+.mh-icon-spin3:before {
+  content: "\e832";
+} /* 'î ²' */
+.mh-icon-spin4:before {
+  content: "\e834";
+} /* 'î ´' */
+.mh-icon-spin5:before {
+  content: "\e838";
+} /* 'î ¸' */
+.mh-icon-spin6:before {
+  content: "\e839";
+} /* 'î ¹' */
+.mh-icon-th-thumb:before {
+  content: "\f00a";
+} /* 'ï€' */
+.mh-icon-link-ext:before {
+  content: "\f08e";
+} /* 'ï‚' */
+.mh-icon-twitter:before {
+  content: "\f099";
+} /* 'ï‚™' */
+.mh-icon-facebook:before {
+  content: "\f09a";
+} /* 'ï‚' */
+.mh-icon-resize-full-alt:before {
+  content: "\f0b2";
+} /* 'ï‚²' */
+.mh-icon-gplus:before {
+  content: "\f0d5";
+} /* 'ïƒ•' */
+.mh-icon-linkedin:before {
+  content: "\f0e1";
+} /* 'ïƒ¡' */
+.mh-icon-comment:before {
+  content: "\f0e5";
+} /* 'ïƒ¥' */
+.mh-icon-youtube:before {
+  content: "\f16a";
+} /* 'ï…ª' */
+.mh-icon-dropbox:before {
+  content: "\f16b";
+} /* 'ï…«' */
+.mh-icon-instagram:before {
+  content: "\f16d";
+} /* 'ï…­' */
+.mh-icon-flickr:before {
+  content: "\f16e";
+} /* 'ï…®' */
+.mh-icon-tumblr:before {
+  content: "\f173";
+} /* 'ï…³' */
+.mh-icon-dribbble:before {
+  content: "\f17d";
+} /* 'ï…½' */
+.mh-icon-skype:before {
+  content: "\f17e";
+} /* 'ï…¾' */
+.mh-icon-vimeo:before {
+  content: "\f194";
+} /* 'ï†”' */
+.mh-icon-reddit:before {
+  content: "\f1a1";
+} /* 'ï†¡' */
+.mh-icon-digg:before {
+  content: "\f1a6";
+} /* 'ï†¦' */
+.mh-icon-vine:before {
+  content: "\f1ca";
+} /* 'ï‡' */
+.mh-icon-git:before {
+  content: "\f1d3";
+} /* 'ï‡“' */
+.mh-icon-wechat:before {
+  content: "\f1d7";
+} /* 'ï‡—' */
+.mh-icon-share:before {
+  content: "\f1e0";
+} /* 'ï‡ ' */
+.mh-icon-pinterest:before {
+  content: "\f231";
+} /* 'ïˆ±' */
+.mh-icon-whatsapp:before {
+  content: "\f232";
+} /* 'ïˆ²' */

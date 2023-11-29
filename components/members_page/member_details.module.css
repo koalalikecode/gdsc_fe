@@ -1,0 +1,124 @@
+/* Hover transition*/
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.2);
+}
+
+.member_body {
+    font-size: x-large;
+    color: white;
+}
+
+.fa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50px;
+    height: 50px;
+    font-size: xx-large;
+    text-align: center;
+    border-radius: 50%;
+    color: white;
+}
+
+.fa_facebook {
+    background: #3b5998;
+}
+
+.fa_instagram {
+    background: #ea4c89;
+}
+
+.fa_github {
+    background: black;
+}
+
+.member_image {
+    border-radius: 25px;
+    max-width: 100%;
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.social_links {
+    position: relative;
+    margin-top: -35px;
+}
+
+.member_name {
+    font-weight: bold;
+    font-size: xxx-large;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(
+            to right,
+            rgba(252, 96, 118, 1),
+            rgba(255, 154, 68, 1)
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.role {
+    font-weight: 500;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    color: #5e5e5e;
+    margin: 0 25px 10px 0;
+}
+
+.member_slogan {
+    color: #5d5d5d;
+    margin: 1em 0;
+}
+
+.information_key {
+    width: 30%;
+    word-wrap: break-word;
+    font-weight: 600;
+    color: #005c7e;
+}
+
+.information_value {
+    width: 70%;
+    word-wrap: break-word;
+    line-height: 1.5em;
+    color: #000000;
+}
+
+@media (max-width: 768px) {
+    .member_body {
+        font-size: large;
+    }
+    .member_name {
+        font-size: xxx-large;
+    }
+    .role {
+        font-size: medium;
+    }
+}
+
+@media (max-width: 576px) {
+    .member_body {
+        font-size: large;
+    }
+    .member_name {
+        font-size: xx-large;
+    }
+    .role {
+        font-size: medium;
+    }
+    .information_key {
+        width: 100%;
+    }
+
+    .information_value {
+        width: 100%;
+    }
+}
+

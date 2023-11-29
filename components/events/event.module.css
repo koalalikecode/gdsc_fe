@@ -1,0 +1,130 @@
+.hover {
+    cursor: pointer;
+}
+
+.event_card {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 10px 5px rgba(0, 92, 126, 0.08);
+}
+
+.event_thumbnail {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.event_img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.event_body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    max-height: 100%;
+    row-gap: 1rem;
+}
+
+.event_title {
+    font-weight: bold;
+    color: #2F4858;
+    font-size: x-large;
+}
+
+.event_date {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #796F92;
+    font-size: large;
+    font-weight: 300;
+}
+
+.event_button_primary {
+    padding: 10px 20px;
+    font-size: large;
+    color: white;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    border-radius: 15px;
+    width: 100%
+}
+
+.event_button_disable {
+    padding: 10px 20px;
+    font-size: large;
+    color: white;
+    border-radius: 15px;
+}
+
+.event_button {
+    padding: 10px 20px;
+    font-size: large;
+    color: #F05B5B;
+    background: none;
+    border: 1px solid #FDA085;
+    border-radius: 15px;
+    width: 100%
+}
+
+.event_button:hover {
+    color: white;
+    background: linear-gradient(90deg, #FFAFBD 0%, #FFC3A0 100%);
+}
+
+.event_button_group {
+    background: white;
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 100%;
+}
+
+.event_status {
+    font-size: large;
+}
+
+.event_sidebar {
+    border: 1px solid red;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem 0;
+}
+
+.guest_title {
+    color: rgb(224, 5, 5);
+    text-align: center;
+    font-size: x-large;
+    position: relative;
+}
+
+.guest_img {
+    height: 120px;
+    width: 120px;
+    margin: 0 1rem 0 0;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.guest-widget {
+    border-radius: 20px;
+    box-shadow: 0 10px 5px rgba(0, 92, 126, 0.08);
+}
+
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.line {
+    color: black;
+    size: 10px;
+}

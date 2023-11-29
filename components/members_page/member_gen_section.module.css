@@ -1,0 +1,28 @@
+.see_more {
+    font-weight: 600;
+    font-size: large;
+    color: #e67e22;
+}
+
+.gen {
+    font-weight: bold;
+    font-size: xx-large;
+    color: #2f4858;
+}
+
+.member_section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    gap: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .gen {
+        font-size: x-large;
+    }
+    .see_more {
+      font-size: small;
+    }
+}

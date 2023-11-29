@@ -1,0 +1,53 @@
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 15px;
+
+    border-radius: 0px 0px 20px 20px;
+}
+
+.name {
+    font-style: normal;
+    font-weight: bold;
+    font-size: x-large;
+    color: #2f4858;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
+}
+
+.member_card {
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 10px 5px rgba(0, 92, 126, 0.08);
+}
+
+.member_image {
+    border-radius: 20px 20px 0 0;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .member_image {
+        width: 160px;
+        height: 150px;
+    }
+    .name {
+        font-size: small;
+    }
+    .badge {
+        font-size: 8px;
+    }
+}

@@ -1,0 +1,20 @@
+.logo_img {
+  margin: 20px;
+  background: red;
+}
+.logo_container {
+  background: black;
+  display: flex;
+  flex-direction:row;
+  justify-content: left;
+}
+@media (max-width: 768px) {
+  .logo_img {
+    width: 100%;
+  }
+  .header_banner {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+}

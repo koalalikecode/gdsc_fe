@@ -1,0 +1,500 @@
+[
+  {
+    "id": 56777035,
+    "rawContent": "<div class=\"post-body\">\n    <figure>\n        <img src=\"https://i.postimg.cc/ZKpRJQZG/git-grande.jpg\" alt=\"Git logo\"/>\n        <figcaption>Git</figcaption>\n    </figure>\n    <h1 id=\"git-la-gi\">Git là gì?</h1>\n    <p>\n        <strong><a href=\"https://git-scm.com/\" target=\"_blank\">Git</a></strong> là một trong những\n        <em>Hệ thống Quản lý Phiên bản Phân tán</em> (Distributed Version Control\n        System), được phát triển bởi Linus Torvalds vào năm 2005, vốn được phát\n        triển nhằm quản lý mã nguồn (source code) của Linux. Trên Git, ta có thể lưu\n        trạng thái của file dưới dạng lịch sử cập nhật. Vì thế, có thể đưa file đã\n        chỉnh sửa một lần về trạng thái cũ hay có thể biết được file đã được chỉnh\n        sửa chỗ nào.\n    </p>\n    <h1 id=\"git-va-git-hub-khac-nhau-the-nao\">Git và Github khác nhau thế nào?</h1>\n    <p>\n        <a href=\"https://git-scm.com/\" target=\"_blank\">Git</a> là một hệ thống kiểm soát phiên bản\n        (version control). <a href=\"https://github.com/\" target=\"_blank\">Github</a> là nền tảng lưu\n        trữ cho Git. Hiểu nôm na, chúng ta quản lý code qua Git, và lưu trữ chúng\n        trên <a href=\"https://github.com/\" target=\"_blank\">Github</a>. Ngoài\n        <a href=\"https://github.com/\" target=\"_blank\">Github</a>, còn có GitLab, BitBucket,\n        SourceForge... cũng là những dịch vụ lưu trũ code.\n    </p>\n    <h1 id=\"the-nao-la-repository-branch\">Thế nào là repository, branch?</h1>\n    <p>\n        <strong>Repository</strong>: Repository được hiểu là một kho chứa toàn bộ\n        project bao gồm thông tin chi tiết, source code, lịch sử thay đổi và nội\n        dung thay đổi của từng cá nhân đến project. Dữ liệu của repository được lưu\n        trong thư mục <code>.git</code>.\n    </p>\n    <p>\n        Tất cả dữ liệu của Repository đều được chứa trong thư mục bạn đang làm việc\n        dưới dạng folder ẩn có tên là <code>.git</code>. Repository có hai loại:\n    </p>\n    <ul>\n        <li>\n            <p>\n                <strong>Remote repository</strong>: repository để chia sẻ giữa nhiều\n                người và bố trí trên server chuyên dụng (như Github);\n            </p>\n        </li>\n        <li>\n            <p>\n                <strong>Local repository</strong>: repository bố trí trên máy local,\n                dành cho một người dùng sử dụng.\n            </p>\n        </li>\n    </ul>\n    <p>\n        Nếu như bạn muốn theo dõi một dự án cũ trong Git, việc đầu tiên là bạn cần ở\n        trong thư mục của project đó và gõ lệnh:\n    </p>\n    <pre><code class=\"language-bash\"><span class=\"hljs-variable\">$ </span>git init\n</code></pre>\n    <p>Hoặc bạn có thể tạo một bản sao của một repository có sẵn bằng lệnh:</p>\n    <pre><code class=\"language-bash\">$ git <span class=\"hljs-keyword\">clone</span> <span class=\"hljs-title\">[url</span>]\n</code></pre>\n    <p>\n        <strong>Branch</strong>: một phân nhánh ghi lại lịch sử chỉnh sửa, lịch sử\n        của branch này sẽ không ảnh hưởng lên các branch khác, nên có thể tiến hành\n        nhiều thay đổi đồng thời trên một repo, giúp giải quyết được nhiều nhiệm vụ\n        cùng lúc.\n    </p>\n    <ul>\n        <li>\n            <p>\n                Khi đã phân nhánh thì các branch làm viêc độc lập, một branch thay đổi\n                sẽ không ảnh hưởng đến branch khác trong cùng repo.\n            </p>\n        </li>\n        <li>\n            <p>\n                Khi bạn tạo một repository thì Git sẽ thiết lập branch mặc định là\n                <code>master</code>, nghĩa là nó sẽ tự tạo một branch\n                <code>master</code> và mọi hoạt động của ban lúc này đều nằm trên branch\n                <code>master</code>.\n            </p>\n        </li>\n        <li>\n            <p>\n                Khi làm việc để hợp các branch lại với nhau chúng ta thực hiện\n                <em>merge branch</em>.\n            </p>\n        </li>\n    </ul>\n    <p>Branch cũng được chia làm 2 loại:</p>\n    <ul>\n        <li>\n            <p>\n                <strong>Local branch</strong>: Là nhánh ở local, tồn tại trên máy local\n                của bạn và tất nhiên chỉ bạn mới có thể nhìn thấy.\n                <em>Local tracking branch</em>: Là một nhánh local để theo dõi các nhánh\n                khác. Điều này để cam kết rằng bạn có thể push/pull các commit các nhánh\n                khác.\n            </p>\n        </li>\n        <li>\n            <p>\n                <strong>Remote branch</strong>: là branch lưu ở remote. Branch này có\n                thể fetch về local nhưng không tạo thêm branch ở local.\n                <em>Remote tracking branch</em>: là một bản sao cục bộ (local) của một\n                nhánh remote.\n            </p>\n        </li>\n    </ul>\n    <h1 id=\"lam-the-nao-de-xoa-mot-branch-local-lam-the-nao-de-xoa-mot-branch-remote\">\n        Làm thế nào để xoá một branch local, làm thế nào để xoá một branch remote?\n    </h1>\n    <h2 id=\"xoa-local-branch\">Xóa local branch</h2>\n    <pre><code class=\"language-bash\">$ git <span class=\"hljs-keyword\">branch </span>-d &lt;ten_branch&gt;\n</code></pre>\n    <p>\n        Bạn có thể dùng <code>--delete</code> hoặc <code>-D</code> thay cho\n        <code>-d</code>\n    </p>\n    <h2 id=\"xoa-remote-branch\">Xóa remote branch</h2>\n    <p>\n        Ta có thể kiểm tra danh sách những remote branch hiện có bằng lệnh:\n        <code>$ git branch -r</code>\n    </p>\n    <pre><code class=\"language-bash\">$ git push <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">ten_remote</span>&gt;</span> -d <span\n            class=\"hljs-tag\">&lt;<span class=\"hljs-name\">ten_branch</span>&gt;</span>\n</code></pre>\n    <p>Thông thường <code>&lt;ten_remote&gt;</code> sẽ là <code>origin</code></p>\n    <h1 id=\"the-nao-la-git-rebase-phan-biet-rebase-voi-merge\">Thế nào là git rebase? Phân biệt rebase với merge?</h1>\n    <p>\n        <strong>Rebase</strong> là việc tích hợp các thay đổi từ nhánh này vào nhánh\n        khác. Trong Git, có 2 cách để thực hiện công việc này đó là\n        <em>rebase</em> và\n        <em>merge</em>\n    </p>\n    <h2 id=\"rebase\">rebase</h2>\n    <pre><code class=\"language-bash\">$ git checkout <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">branch_name</span>&gt;</span>\n$ git rebase <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">rebase_branch_name</span>&gt;</span>\n</code></pre>\n    <p>\n        Lấy code từ <code>rebase_branch_name</code> sau đó từ những commit ở đó tạo\n        ra những commit tương tự lên <code>branch_name</code>. Thực hiện rebase thì\n        các commit đã tồn tại bị bỏ đi và tái tạo lại các commit tương tự nhưng thực\n        ra là khác biệt. Điều này làm lịch sử commit ở local và remote khác nhau.\n    </p>\n    <p>\n        Đặc điểm: các commit của nhánh được tạo mới sẽ nằm liền mạch, và các commit\n        của <code>rebase-branch</code> sẽ là các commit mới nhất.\n    </p>\n    <h2 id=\"merge\">merge</h2>\n    <pre><code class=\"language-bash\">$ git checkout <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">branch_name</span>&gt;</span>\n$ git merge <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">branch_2_name</span>&gt;</span>\n</code></pre>\n    <p>\n        git dùng 2 bản commit cuối cùng của từng nhánh rồi tích hợp lại với nhau tạo\n        thành 1 commit mới theo kiểu hình thoi. Thực hiện merge thì các commit đã\n        tồn tại không bị thay đổi, chỉ tạo ra 1 commit mới tích hợp của 2 commit mới\n        nhất.\n    </p>\n    <p>\n        Đặc điểm: các commit của 2 nhánh được sắp xếp theo thời gian tạo commit.\n    </p>\n    <figure>\n        <img\n                src=\"https://i.postimg.cc/MZBpqLmy/941d3128-a42f-4a9a-b5c8-4d579558ccc0.png\"\n                alt=\"Merge and Rebase\"\n        />\n        <figcaption>Phân biệt merge và rebase</figcaption>\n    </figure>\n    <h1 id=\"the-nao-la-git-stash\">Thế nào là git stash?</h1>\n    <p>\n        Việc đang làm dở ở branch này và muốn chuyển sang branch khác xảy ra thường\n        xuyên, tuy nhiên bạn muốn lưu lại thay đổi mà chưa commit thì\n        <code>git stash</code> sẽ giúp bạn. Chỉ cần thực hiện câu lệnh:\n        <code>$ git stash save</code> hoặc chỉ cần <code>git stash</code>. Hãy thử\n        kiểm tra bằng cách <code>git status</code>, việc chuyển sang branch khác đã\n        được chấp nhận.\n    </p>\n    <p>Ngoài ra, có 1 số tuỳ chọn như:</p>\n    <p>Xem lại lịch sử thay đổi:</p>\n    <pre><code class=\"language-bash\">$ git stash <span class=\"hljs-built_in\">list</span>\n</code></pre>\n    <p>Xem lại lịch sử thay đổi cùng nội dung của nó:</p>\n    <pre><code class=\"language-bash\">$ git stash <span class=\"hljs-built_in\">list</span> -p\n</code></pre>\n    <p>Xem lại lịch sử thay đổi:</p>\n    <pre><code class=\"language-bash\">$ git stash <span class=\"hljs-built_in\">list</span>\n</code></pre>\n    <p>Xem lại lịch sử thay đổi cụ thể của lần n:</p>\n    <pre><code class=\"language-bash\"><span class=\"xml\">$ git stash show stash@</span><span class=\"hljs-template-variable\">{n}</span><span\n            class=\"xml\"></span>\n</code></pre>\n    <p>Apply thay đổi của lần n:</p>\n    <pre><code class=\"language-bash\">$ git stash <span class=\"hljs-built_in\">apply</span> stash@{n}\n</code></pre>\n    <p>Xoá thay đổi:</p>\n    <pre><code class=\"language-bash\"><span class=\"xml\">$ git stash drop stash@</span><span class=\"hljs-template-variable\">{n}</span><span\n            class=\"xml\"></span>\n</code></pre>\n    <p>Xoá toàn bộ:</p>\n    <pre><code class=\"language-bash\">$ git stash <span class=\"hljs-built_in\">clear</span>\n</code></pre>\n    <h1 id=\"lam-the-nao-xoa-bo-mot-commit-bat-ky\">Làm thế nào xoá bỏ một commit bất kỳ?</h1>\n    <p>Có 2 cách để thực hiện công việc này:</p>\n    <p>Cách 1: Sử dụng <code>git revert</code></p>\n    <pre><code class=\"language-bash\">$ git <span class=\"hljs-keyword\">revert </span>&lt;commit_id&gt;\n</code></pre>\n    <p>\n        Lệnh này tạo commit đảo ngược commit có <code>commit_id</code> đã chọn,\n        commit chỉ định bị xoá bỏ, các commit mới hơn vẫn được giữ nguyên.\n    </p>\n    <p>Cách 2: Sử dụng <code>git reset</code></p>\n    <pre><code class=\"language-bash\">$ git <span class=\"hljs-keyword\">reset</span> <span class=\"hljs-comment\">--hard &lt;commit_id&gt;</span>\n</code></pre>\n    <p>\n        Lệnh này sẽ xoá toàn bộ các commit trước đó và đưa branch về trạng thái của\n        commit có <code>commit_id</code> đã chọn.\n    </p>\n    <h1 id=\"phan-biet-git-reset-git-reset-hard-git-reset-soft\">\n        Phân biệt <code>git reset</code>, <code>git reset --hard</code>,\n        <code>git reset --soft</code>\n    </h1>\n    <h2 id=\"git-reset\">git reset</h2>\n    <pre><code class=\"language-bash\">$ git reset <span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">commit_id</span>&gt;</span>\n</code></pre>\n    <p>\n        Sử dụng câu lệnh này khi ta muốn di chuyển <code>HEAD</code> đến commit\n        reset và giữ nguyên tất cả thay đổi của file đến vị trị hiện tại. Tuy nhiên\n        sẽ loại bỏ thay đổi khỏi stage.\n    </p>\n    <h2 id=\"git-reset-hard\">git reset --hard</h2>\n    <pre><code class=\"language-bash\">$ git <span class=\"hljs-keyword\">reset</span> <span class=\"hljs-comment\">--hard &lt;commit_id&gt;</span>\n</code></pre>\n    <p>\n        Việc thêm <code>--hard</code> đã thể hiện sự mạnh mẽ khi nó vẫn di chuyển\n        <code>HEAD</code> đến commit reset nhưng sẽ loại bỏ tất cả thay đổi của file\n        sau commit reset.\n    </p>\n    <h2 id=\"git-reset-soft\">git reset --soft</h2>\n    <pre><code class=\"language-bash\">$ git <span class=\"hljs-keyword\">reset</span> <span class=\"hljs-comment\">--soft &lt;commit_id&gt;</span>\n</code></pre>\n    <p>\n        Câu lệnh này được khuyến khích sử dụng khi muốn di chuyển\n        <code>HEAD</code> đến commit reset do có ưu điểm là sẽ giữ nguyên tất cả\n        thay đổi của file và các thay đổi ở stage.\n    </p>\n    <h1 id=\"the-nao-la-cherry-pick-khi-nao-thi-dung-cherry-pick\">\n        Thế nào là <code>cherry-pick</code>? Khi nào thì dùng\n        <code>cherry-pick</code>\n    </h1>\n    <figure>\n        <img\n                src=\"https://i.postimg.cc/6q7Xb85s/git-cherry-pick-commit.png\"\n                alt=\"Git cherry-pick\"\n        />\n        <figcaption>Git cherry-pick</figcaption>\n    </figure>\n    <p>\n        Giả sử bạn có 2 branches khác nhau cho 2 khách hàng khác nhau, tạm gọi là\n        branch A và branch B. Và bạn đang fix một bug nghiêm trọng cùng tồn tại trên\n        hệ thống của cả 2 khách hàng, bạn muốn chỉ commit một lần nhưng có thể apply\n        vào luôn cả 2 branches.\n    </p>\n    <p>\n        Bạn có thể dùng lệnh <code>cherry-pick</code> của Git để giải quyết, như\n        sau:\n    </p>\n    <p>Commit ở branh A</p>\n    <pre><code class=\"language-bash\">$ git <span class=\"hljs-keyword\">add</span><span class=\"bash\"> -A\n</span>$ git commit -m <span class=\"hljs-string\">\"Awesome Bug Fixed :(\"</span>\n</code></pre>\n    <p>Thực hiện <code>cherry-pick</code> ở branch B</p>\n    <pre><code class=\"language-bash\"><span class=\"hljs-variable\">$ </span>git checkout B\n<span class=\"hljs-variable\">$ </span>git cherry-pick A\n</code></pre>\n    <p>\n        <code>cherry-pick</code> sẽ lấy commit cuối cùng ở branch A merge vào branch\n        B. Ngoài ra, bạn còn có thể chỉ định danh sách các commit cần\n        &quot;bốc&quot; từ A để &quot;bỏ&quot; vào B nếu cần thiết.\n    </p>\n</div>\n",
+    "authorName": "Tu Bui",
+    "timeRelease": "2021-11-02T13:40:50Z",
+    "timeCreate": "2021-11-01T11:28:23Z",
+    "title": "Một số câu hỏi về Git",
+    "subTitle": "Sử dụng Git là một kỹ năng không thể thiếu của coder. Bài viết này sẽ giúp bạn hiểu một số khái niệm cơ bản và cách làm việc với Git.",
+    "coverImgUrl": "https://i.postimg.cc/1X0RxN2h/sv-2.jpg",
+    "thumbnailImgUrl": "https://i.postimg.cc/ZKpRJQZG/git-grande.jpg",
+    "blogTag": ["Git"]
+  },
+  {
+    "id": 56619990,
+    "rawContent": "<div class="post-body">
+    <figure>
+      <img
+        src="https://i.postimg.cc/28YRybpq/d6668078-23db-42d3-b311-ea0a97dbd6e6.gif"
+        alt="Event loop và Callback queue"
+      />
+      <figcaption>Asynchronous JavaScript</figcaption>
+    </figure>
+  
+    <h1 id="gioi-thieu">Giới thiệu</h1>
+  
+    <p>
+      <strong>JavaScript</strong> là một ngôn ngữ lập trình đơn luồng có nghĩa là
+      chỉ có một điều có thể xảy ra tại một thời điểm. Tức là, JavaScript engine
+      chỉ có thể xử lý một câu lệnh tại một thời điểm trong một luồng duy nhất.
+    </p>
+  
+    <p>
+      Mặc dù ngôn ngữ đơn luồng đơn giản hóa việc viết code do bạn không cần lo
+      lắng về các vấn đề tương tranh, điều này cũng có nghĩa là bạn không thể thực
+      hiện các tác vụ dài như truy cập mạng mà không chặn luồng chính.
+    </p>
+  
+    <p>
+      Hãy tưởng tượng bạn request dữ liệu từ một API. Tùy thuộc vào tình hình máy
+      chủ có thể mất một thời gian để xử lý request trong khi chặn luồng chính làm
+      cho trang web không hồi đáp.
+    </p>
+  
+    <p>
+      Đó là lý do asynchronous JavaScript xuất hiện. Sử dụng asynchronous
+      JavaScript (callbacks, promises, and async/await) bạn có thể thực hiện các
+      request network dài mà không chặn luồng chính.
+    </p>
+  
+    <h1 id="synchronous-javascript">Synchronous Javascript</h1>
+  
+    <p>
+      Trước khi đi sâu vào asynchronous JavaScript, ta cần hiểu cách mà
+      synchronous JavaScript code được thực thi trong JavaScript engine. Ví dụ:
+    </p>
+  
+    <pre><code class="language-javascript">const second = () =&gt; {
+      console.log('Hello there!');
+  }
+  const first = () =&gt; {
+      console.log('Hi there!');
+      second();
+      console.log('The End');
+  }
+  first();
+  </code></pre>
+  
+    <p>
+      Để hiểu đoạn code trên được thực thi như thế nào trong JavaScript engine,
+      chúng ta phải hiểu khái niệm về <strong>execution context</strong> và
+      <strong>call stack</strong>.
+    </p>
+  
+    <h2 id="execution-context">Execution Context</h2>
+  
+    <p>
+      <strong>Execution Context</strong> là một khái niệm trừu tượng về môi trường
+      nơi JavaScript code được đánh giá và thực hiện. Bất cứ khi nào code được
+      thực thi trong JavaScript, nó chạy trong một <em>execution context</em>.
+    </p>
+  
+    <p>
+      Code global thực thi trong một global execution context, và code toàn cục
+      thực hiện trong một local execution context toàn cục. Mỗi hàm có một
+      execution context riêng của nó.
+    </p>
+  
+    <h2 id="call-stack">Call Stack</h2>
+  
+    <p>
+      <strong>Call stack</strong> như tên gọi của nó là một stack với cấu trúc
+      <em>LIFO (Last in First out)</em> được sử dụng để lưu trữ tất cả các
+      execution context được tạo ra trong quá trình thực thi code.
+    </p>
+  
+    <blockquote>
+      <p>
+        JavaScript có một call stack duy nhất vì nó là một ngôn ngữ lập trình đơn
+        luồng. Call Stack có cấu trúc LIFO nghĩa là các mục chỉ có thể được thêm
+        hoặc xóa khỏi đầu stack.
+      </p>
+    </blockquote>
+  
+    <p>
+      Hãy quay lại đoạn mã trên và tìm hiểu cách code được thực thi bên trong
+      JavaScript engine.
+    </p>
+  
+    <figure>
+      <img
+        src="https://i.postimg.cc/523LSZ88/e6a202c0-2dbc-4ec0-af91-0fc89500fb72.webp"
+        alt="Call stack"
+      />
+      <figcaption>Call stack khi chạy đoạn code trên</figcaption>
+    </figure>
+  
+    <ul>
+      <li>
+        <p>
+          Khi đoạn code trên được thực thi, một
+          <em>local execution context</em> được tạo ra (biểu diễn bằng hàm
+          <code>main()</code>) và được đẩy vào đầu stack. Khi hàm
+          <code>first()</code> được gọi, nó được đẩy vào đầu stack.
+        </p>
+      </li>
+      <li>
+        <p>
+          Tiếp theo, <code>console.log('Hi there!')</code> được đẩy vào đầu stack,
+          khi kết thúc, nó được lấy ra từ stack. Sau đó hàm
+          <code>second()</code> được gọi và nó được đẩy vào đầu của stack.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>console.log('Hello there!')</code> được đẩy vào đầu stack là lấy
+          ra khi nó kết thúc. Hàm <code>second()</code> kết thúc, do đó nó được
+          lấy ra khỏi stack.
+        </p>
+      </li>
+      <li>
+        <p>
+          <code>console.log(‘The End’)</code> được đẩy vào đầu của stack và xóa đi
+          khi nó kết thúc. Sau đó, hàm <code>first()</code> kết thúc và nó được
+          lấy ra khỏi stack.
+        </p>
+      </li>
+      <li>
+        <p>
+          Chương trình thực hiện xong ở đây và
+          <em>local execution context</em> (<code>main()</code>) được lấy ra khỏi
+          stack.
+        </p>
+      </li>
+    </ul>
+  
+    <p>
+      Đến đây ta đã có ý tưởng cơ bản về <strong>call stack</strong> và JavaScript
+      đồng bộ hoạt động như thế nào, hãy quay trở lại với JavaScript bất đồng bộ.
+    </p>
+  
+    <h1 id="asynchronous-javascript">Asynchronous Javascript</h1>
+  
+    <h2 id="blocking">Blocking</h2>
+  
+    <p>
+      Giả sử ta đang xử lý hình ảnh hay thực hiện network request theo cách đồng
+      bộ:
+    </p>
+  
+    <pre><code class="language-javascript">const processImage = (image) => {
+  /**
+  * doing some operations on image
+  **/
+  console.log('Image processed');
+  }
+  const networkRequest = (url) => {
+  /**
+  * requesting network resource
+  **/
+  return someData;
+  }
+  const greeting = () => {
+  console.log('Hello World');
+  }
+  processImage(logo.jpg);
+  networkRequest('www.somerandomurl.com');
+  greeting();
+  </code></pre>
+  
+    <p>
+      Việc xử lý hình ảnh và network request cần có thời gian. Vì vậy, khi hàm
+      <code>processImage()</code> được gọi, sẽ mất một chút thời gian tùy thuộc
+      vào kích thước của hình ảnh.
+    </p>
+  
+    <p>
+      Khi hàm <code>processImage()</code> hoàn thành, nó sẽ bị xóa khỏi stack, sau
+      đó hàm <code>networkRequest()</code> được gọi và được đẩy vào stack, một lần
+      nữa cũng sẽ mất một thời gian để nó thực thi xong.
+    </p>
+  
+    <p>
+      Cuối cùng khi hàm <code>networkRequest()</code> hoàn thành, hàm
+      <code>greeting()</code> được gọi và nó chỉ thực thi một câu lệnh
+      <code>console.log</code> và các câu lệnh <code>console.log</code> nói chung
+      là nhanh, do đó hàm <code>greeting()</code> thực hiện xong ngay lập tức và
+      kết thúc.
+    </p>
+  
+    <p>
+      Như đã thấy, chúng ta phải chờ các hàm <code>processImage()</code> và
+      <code>networkRequest()</code> kết thúc. Điều này có nghĩa là các hàm này
+      đang chặn <strong>call stack</strong> hay luồng chính. Do đó chúng ta không
+      thể thực hiện hoạt động khác khi code trên đang thực hiện.
+    </p>
+  
+    <h2 id="giai-phap-cho-blocking">Giải pháp cho blocking</h2>
+  
+    <p>
+      Giải pháp đơn giản nhất là <strong>callbacks không đồng bộ</strong>. Ta sử
+      dụng asynchronous callbacks để làm cho code trở thành
+      <strong>non-blocking</strong>. Ví dụ:
+    </p>
+  
+    <pre><code class="language-javascript">const networkRequest = () =&gt; {
+      setTimeout(() =&gt; {
+          console.log('Async Code');
+      }, 2000);
+  };
+  console.log('Hello World');
+  networkRequest();
+  </code></pre>
+  
+    <p>
+      Ở đây, phương thức <code>setTimeout</code> được sử dụng để mô phỏng network
+      request. Cần nhớ rằng <code>setTimeout</code> không phải là một phần của
+      Javascript engine. Nó là một phần của web APIs và C/C++ APIs.
+    </p>
+  
+    <p>
+      Để hiểu đoạn code này được thực thi như thế nào, chúng ta cần hiểu một vài
+      khái niệm khác như <strong>event loop</strong> và
+      <strong>callback queue</strong> (hay <em>message queue</em>)
+    </p>
+  
+    <figure>
+      <img
+        src="https://i.postimg.cc/yxcv1vtn/97f2b2fc-d251-489e-ab2e-f799a0803931.webp"
+        alt="Event loop và Callback queue"
+        title=""
+      />
+      <figcaption>Event loop và Message queue</figcaption>
+    </figure>
+  
+    <p>
+      <code>event loop</code>, <code>web APIs</code> và
+      <code>message queue</code> không phải là một phần của JavaScript engine, nó
+      là một phần của môi trường thực thi Javascript của browser hay môi trường
+      thực thi Nodejs JavaScript (trong trường hợp Nodejs). Trong Nodejs, web APIs
+      được thay thế bởi C/C++ APIs.
+    </p>
+  
+    <p>
+      Bây giờ hãy trở lại với đoạn code trên và xem xét nó được thực thi như thế
+      nào theo cách bất đồng bộ:
+    </p>
+  
+    <pre><code class="language-javascript">const networkRequest = () =&gt; {
+      setTimeout(() =&gt; {
+          console.log('Async Code');
+      }, 2000);
+  };
+  console.log('Hello World');
+  networkRequest();
+  console.log('The End');
+  </code></pre>
+  
+    <figure>
+      <img
+        src="https://i.postimg.cc/28YRybpq/d6668078-23db-42d3-b311-ea0a97dbd6e6.gif"
+        alt="Event loop và Callback queue"
+        title=""
+      />
+      <figcaption>Event loop và Message queue bất đồng bộ</figcaption>
+    </figure>
+  
+    <p>
+      Khi đoạn code trên được load vào trình duyệt,
+      <code>console.log(‘Hello World’)</code> được đẩy vào stack và lấy ra khi nó
+      kết thúc. Tiếp theo, <code>hàm networkRequest()</code> được gọi và nó được
+      đẩy vào đầu stack.
+    </p>
+  
+    <p>
+      Tiếp theo, hàm <code>setTimeout()</code> được gọi, nó được đẩy vào đầu
+      stack. Hàm <code>setTimeout()</code> có hai tham số 1) callback và 2) thời
+      gian với đơn vị mili giây.
+    </p>
+  
+    <p>
+      Hàm <code>setTimeout()</code> bắt đầu hẹn giờ 2s trong môi trường web APIs.
+      Tại thời điểm này, <code>setTimeout()</code> kết thúc và được lấy ra khỏi
+      stack. Sau đó <code>console.log('The End')</code> được đẩy vào stack, thực
+      thi và xóa khỏi stack sau khi nó hoàn tất.
+    </p>
+  
+    <p>
+      Trong khi đó, bộ hẹn giờ đến hạn và <code>callback</code> được đẩy vào
+      <strong>message queue</strong>. Nhưng <code>callback</code> không được thực
+      hiện ngay lập tức và đó là nơi <strong>event loop</strong> được khởi động.
+    </p>
+  
+    <h2 id="event-loop">Event Loop</h2>
+  
+    <p>
+      Công việc của <strong>event loop</strong> là nhìn vào
+      <strong>call stack</strong> và xác định xem call stack có trống hay không.
+      Nếu call stack trống, nó sẽ nhìn vào <strong>mesage queue</strong> để xem có
+      bất kỳ <code>callback</code> nào đang chờ xử lý để thực hiện nó.
+    </p>
+  
+    <p>
+      Trong trường hợp này, message queue có chứa 1 <code>callback</code> còn call
+      stack thì trống rỗng. Do đó event loop đẩy <code>callback</code> vào đầu
+      stack.
+    </p>
+  
+    <p>
+      <code>console.log(‘Async Code’)</code> được đẩy vào đầu stack, thực thi và
+      lấy ra khỏi stack. Tại đây, <code>callback</code> kết thúc và được lấy ra
+      khỏi stack và chương trình kết thúc.
+    </p>
+  
+    <p>
+      Message queue cũng chứa các <code>callback</code> từ các DOM events như
+      event click và event keyboard. Ví dụ:
+    </p>
+  
+    <pre><code class="language-javascript">document.querySelector('.btn').addEventListener('click',(event) =&gt; {
+      console.log('Button Clicked');
+  });
+  </code></pre>
+  
+    <p>
+      Trong trường hợp DOM events, <em>event listener</em> đặt ở môi trường web
+      APIs chờ một event cụ thể xảy ra. Và khi nó xảy ra, hàm
+      <code>callback</code> được đặt vào message queue và chờ được thực thi. Một
+      lần nữa event loop sẽ kiểm tra xem call stack có trống không và đẩy
+      <code>callback</code> vào stack nếu nó trống và <code>callback</code> được
+      thực thi.
+    </p>
+  
+    <h2 id="delay-thuc-thi-ham">Delay thực thi hàm</h2>
+  
+    <p>
+      Chúng ta cũng có thể sử dụng <code>setTimeout</code> để trì hoãn việc thực
+      thi hàm cho đến khi stack trống. Ví dụ:
+    </p>
+  
+    <pre><code class="language-javascript">const bar = () =&gt; {
+      console.log('bar');
+  }
+  const baz = () =&gt; {
+      console.log('baz');
+  }
+  const foo = () =&gt; {
+      console.log('foo');
+      setTimeout(bar, 0);
+      baz();
+  }
+  foo();
+  </code></pre>
+  
+    <p>Kết quả là:</p>
+    <pre><code class="language-javascript">foo
+  baz
+  bar
+  </code></pre>
+  
+    <p>
+      Khi code này chạy, đầu tiên <code>foo()</code> được gọi, bên trong foo chúng
+      ta gọi <code>console.log('foo')</code>, sau đó
+      <code>setTimeout()</code> được gọi với <code>bar()</code> là
+      <code>callback</code> và bộ đếm thời gian 0 giây.
+    </p>
+  
+    <p>
+      Bây giờ nếu chúng ta không sử dụng <code>setTimeout</code>, hàm
+      <code>bar()</code> sẽ được thực hiện ngay lập tức, nhưng việc sử dụng
+      <code>setTimeout</code> với bộ đếm thời gian 0 giây giúp trì hoãn việc thực
+      hiện <code>bar()</code> cho đến khi stack trống.
+    </p>
+  
+    <p>
+      Sau 0 giây, <code>callback</code> <code>bar ()</code> được đưa vào message
+      queue đang đợi để được thực thi. Nhưng nó sẽ chỉ được thực hiện khi stack
+      hoàn toàn trống rỗng sau khi hàm <code>baz</code> và <code>foo</code> kết
+      thúc.
+    </p>
+  
+    <h2 id="es6-job-queue">ES6 Job Queue</h2>
+  
+    <p>
+      Chúng ta đã học được cách các <code>callback</code> không đồng bộ và các DOM
+      events được thực thi, sử dụng message queue để lưu trữ tất cả các
+      <code>callback</code> chờ đợi để được thực thi.
+    </p>
+  
+    <p>
+      <strong><a href="http://es6-features.org/" target="_blank">ES6</a></strong>
+      giới thiệu khái niệm về <strong>job queue</strong> được sử dụng bởi
+      <strong>Promises</strong> trong JavaScript.
+    </p>
+  
+    <blockquote>
+      <p>
+        Sự khác biệt giữa message queue và job queue là job queue có mức ưu tiên
+        cao hơn message queue, có nghĩa là các <em>promise job</em> bên trong job
+        queue sẽ được <strong>thực thi trước</strong> các <em>callback</em> bên
+        trong message queue.
+      </p>
+    </blockquote>
+  
+    <p>Ví dụ:</p>
+  
+    <pre><code class="language-javascript">const bar = () =&gt; {
+      console.log('bar');
+  };
+  const baz = () =&gt; {
+      console.log('baz');
+  };
+  const foo = () =&gt; {
+      console.log('foo');
+      setTimeout(bar, 0);
+      new Promise((resolve, reject) =&gt; {
+          resolve('Promise resolved');
+      }).then(res =&gt; console.log(res))
+      .catch(err =&gt; console.log(err));
+      baz();
+  };
+  foo();
+  </code></pre>
+    <p>Kết quả là:</p>
+    <pre><code class="language-javascript">foo
+  baz
+  Promised resolved
+  bar
+  </code></pre>
+  
+    <p>
+      Chúng ta có thể thấy rằng <code>promise</code> được thực hiện trước
+      <code>setTimeout</code>, bởi vì <code>promise</code> response được lưu trữ
+      bên trong job queue có mức độ ưu tiên cao hơn message queue.
+    </p>
+  
+    <h1 id="ket-luan">Kết luận</h1>
+  
+    <p>
+      Chúng ta đã học được cách JavaScript không đồng bộ hoạt động và các khái
+      niệm khác như call stack, event loop, message queue và job queue cùng nhau
+      tạo ra môi trường chạy JavaScript. Những khái niệm này rất hữu ích và quan
+      trọng để bạn học hỏi sâu hơn về Javascript, đặc biệt là khi sử dụng NodeJS.
+    </p>
+  </div>
+  ",
+    "authorName": "Quynh Thi Diem Vu",
+    "timeRelease": "2021-11-02T13:40:50Z",
+    "timeCreate": "2021-11-02T00:02:47Z",
+    "title": "Lịch sử ra đời của CAPTCHA",
+    "subTitle": "CAPTCHA là viết tắt của “Completely Automated Public Turing test to tell Computers and Humans Apart” (tạm dịch: Bài test Turing Tự động để Phân biệt Máy tính và Con người).",
+    "coverImgUrl": "https://i.postimg.cc/YSBwvYGy/133720314-703503743889532-7843514706027380865-n.jpg",
+    "thumbnailImgUrl": "https://i.postimg.cc/fRmQt3by/136967762-368135214538472-5317614971487931310-n.png",
+    "blogTag": ["Security", "Knowledge"]
+  },
+  {
+    "id": 63924574,
+    "rawContent": "<div class=\"post-body line-numbers\">\n<figure>\n  <img\n    src=\"https://i.postimg.cc/fbt7W3Qb/105040771-43887300-5a88-11eb-9f01-bee100b9ef22.png\"\n    alt=\"NumPy logo\"\n  />\n  <figcaption>Thư viện NumPy</figcaption>\n</figure>\n<p>\n  Trong số hàng triệu thư viện hỗ trợ Python thì có một thư viện lại gần như\n  được đóng đinh mà bắt buộc lập trình viên nào khi làm việc với Python cũng cần\n  phải tìm hiểu đó chính là thư viện <strong>NumPy</strong>. Trong bài ngày hôm\n  nay tôi xin giới thiệu với các bạn về thư viện NumPy trong Python và cách sử\n  dụng nó trong Python.\n</p>\n<h1 id=\"cach-cai-dat-numpy\">Cách cài đặt NumPy</h1>\n<p>Bạn cần phải cài đặt Numpy thông qua pip</p>\n<pre><code class=\"language-py\">sudo apt install python3-pip\npip install numpy\n</code></pre>\n<p>\n  Sau khi đã cài đặt xong NumPy, chúng ta cần import nó để sử dụng như các thư\n  viện khác của Python để sử dụng các hàm số của NumPy:\n</p>\n<pre><code class=\"language-py\">import numpy as np\n</code></pre>\n<h1 id=\"arrays\">Arrays</h1>\n<p>\n  Một mảng trong NumPy là một lưới các giá trị, và tất cả các giá trị có dùng\n  kiểu giá trị, và được đánh <strong>index</strong> bởi một số nguyên không âm,\n  số chiều được gọi là <strong>rank</strong>, và <strong>shape</strong> là một\n  <em>tuple</em> các số nguyên đưa ra kích thước của mảng theo mỗi chiều.\n</p>\n<figure>\n  <img\n    src=\"https://i.postimg.cc/52f45qQT/99411817-97f76100-2926-11eb-9e16-8629f247610c.png\"\n    alt=\"Array\"\n  />\n  <figcaption>Mảng trong Python</figcaption>\n</figure>\n<pre><code class=\"language-py\">import numpy as np\n\na = np.array([1, 2, 3])   # Tạo một numpy array với rank = 1\n\nprint(type(a))            # &lt;class 'numpy.ndarray'&gt;\nprint(a.shape)            # (3,)\nprint(a[0], a[1], a[2])   # 1 2 3\na[0] = 5                  # Thay đổi giá trị của 1 phần tử trong mảng\nprint(a)                  # [5, 2, 3]\n\nb = np.array([[1,2,3],[4,5,6]])    # Tạo một numpy array với rank =2\nprint(b.shape)                     # (2, 3)\nprint(b[0, 0], b[0, 1], b[1, 0])   # 1 2 4\n</code></pre>\n<figure>\n  <img\n    src=\"https://i.postimg.cc/xTCfhLSB/99505630-a5a6f800-29b3-11eb-806c-f5c45df68edd.png\"\n    alt=\"Mảng nhiều chiều\"\n  />\n  <figcaption>Mảng nhiều chiều</figcaption>\n</figure>\n<h2 id=\"cach-khoi-tao-mot-numpy-array\">Cách khởi tạo một NumPy array</h2>\n<pre><code class=\"language-py\">numpy.array(object, dtype = None, copy = True, order = None, subok = False, ndmin = 0)\n</code></pre>\n<p>\n  Hàm tạo ở trên có nhiều tham số, tuy nhiên về cơ bản bạn chỉ cần quan tâm\n  những params sau:\n</p>\n<table>\n  <thead>\n    <tr>\n      <th>param</th>\n      <th>Mô tả</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>object</strong></td>\n      <td>Một object, list, collection… có dạng mảng</td>\n    </tr>\n    <tr>\n      <td><strong>dtype</strong></td>\n      <td>Kiểu dữ liệu mong muốn của mảng, <em>optional</em></td>\n    </tr>\n    <tr>\n      <td><strong>ndmin</strong></td>\n      <td>Số chiều của mảng, <em>optional</em></td>\n    </tr>\n  </tbody>\n</table>\n<p>Ví dụ:</p>\n<pre><code class=\"language-py\">import numpy as np\na = np.array([1, 2, 3], ndmin = 2) # rank = 2\nprint(a)                # [[1, 2, 3]]\n\nb = np.array([1, 2, 3], dtype = complex)\nprint(b)                 # [1.+0.j, 2.+0.j, 3.+0.j]\n</code></pre>\n<p>Ngoài ra còn một số cách tiện lợi, nên sử dụng linh hoạt:</p>\n<pre><code class=\"language-py\">import numpy as np\n\na = np.zeros((2,2))   # Tạo một numpy array 2x2 với tất cả phẩn tử là 0\nprint(a)              # [[ 0.  0.]\n                      #  [ 0.  0.]]\n\nb = np.ones((1,2))    # Tạo một numpy array 1x2 chiều với tất cả phẩn tử là 1\nprint(b)              # [[ 1.  1.]]\n\nc = np.full((2,2), 7)  # Tạo một mảng hằng\nprint(c)               # [[ 7.  7.]\n                       #  [ 7.  7.]]\n\nd = np.eye(2)         # Tạo một ma trận đơn vị 2 x 2\nprint(d)              # [[ 1.  0.]\n                      #  [ 0.  1.]]\n\ne = np.random.random((2,2))  # Tạo một mảng với các giá trị ngẫu nhiên\nprint(e)                     # Có thể là &quot;[[ 0.91940167  0.08143941]\n                             #             [ 0.68744134  0.87236687]]&quot;\nf = np.arange(10) # Tạo 1 numpy array với các phẩn tử từ 0 đến 9\nprint(f)          # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n</code></pre>\n<blockquote>\n  <h2 id=\"su-khac-biet-giua-python-list-va-numpy-array\">Sự khác biệt giữa Python List và Numpy Array</h2>\n  <ol>\n    <li>\n      <p>\n        Python List có thể chứa các phần tử với các kiểu dữ liệu khác nhau trong\n        khi các phần tử của Numpy Array luôn đồng nhất (cùng một kiểu dữ liệu).\n      </p>\n    </li>\n    <li>\n      <p>Numpy Array nhanh hơn và nhỏ gọn hơn Python List:</p>\n      <ul>\n        <li>\n          Numpy Array sử dụng bộ nhớ cố định để lưu trữ dữ liệu và ít bộ nhớ hơn\n          Python List.\n        </li>\n        <li>Cấp phát bộ nhớ liền kề trong NumPy Array</li>\n      </ul>\n    </li>\n  </ol>\n</blockquote>\n<h1 id=\"array-indexing\">Array Indexing</h1>\n<p>Numpy cung cấp một số cách để truy xuất phần tử trong mảng</p>\n<h2 id=\"slicing\">Slicing</h2>\n<p>Tương tự như list trong , numpy arrays cũng có thể được cắt.</p>\n<pre><code class=\"language-py\">import numpy as np\n\n# Khởi tạo numpy array có shape = (3, 4) có giá trị như sau:\n# [[ 1  2  3  4]\n#  [ 5  6  7  8]\n#  [ 9 10 11 12]]\na = np.array([[1,2,3,4], [5,6,7,8], [9,10,11,12]])\n\n# Sử dụng slicing để tạo numpy array b bằng cách lấy 2 hàng đầu tiên\n# và cột 1, 2. Như vậy b sẽ có shape = (2, 2):\n# [[2 3]\n#  [6 7]]\nb = a[:2, 1:3]\n\n# Một array tạo ra từ slicing sẽ có cùng địa chỉ với array gốc.\n# Nếu thay đổi 1 trong 2 thì array còn lại cũng thay đổi.\nprint(a[0, 1])   # 2\nb[0, 0] = 77     # b[0, 0] ở đây tương đương với a[0, 1]\nprint(a[0, 1])   # 77\n</code></pre>\n<p>\n  Bạn cũng có thể kết hợp việc dùng slicing và dùng chỉ số. Tuy nhiên, cách làm\n  đó sẽ cho ra một mảng mới có rank thấp hơn mảng gốc.\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\n# Tạo một numpy array có shape (3, 4) với giá trị như sau:\n# [[ 1  2  3  4]\n#  [ 5  6  7  8]\n#  [ 9 10 11 12]]\na = np.array([[1,2,3,4], [5,6,7,8], [9,10,11,12]])\n\n# Hai cách truy cập dữ liệu ở hàng giữa của mảng\n# Dùng kết hợp chỉ số và slice -&gt; được array mới có rank thấp hơn,\n# Nếu chỉ dùng slice ta sẽ có 1 array mới có cùng rank\n# với array gốc\nrow_r1 = a[1, :]    # Rank 1, hàng thứ 2 của a\nrow_r2 = a[1:2, :]  # Rank 2, vẫn là hàng thứ 2 của a\nprint(row_r1, row_r1.shape)  # Prints &quot;[5 6 7 8] (4,)&quot;\nprint(row_r2, row_r2.shape)  # Prints &quot;[[5 6 7 8]] (1, 4)&quot;\n\n# Chúng ta có thể làm tương tự với cột của numpy array:\ncol_r1 = a[:, 1]\ncol_r2 = a[:, 1:2]\nprint(col_r1, col_r1.shape)  # [2 6 10] (3,)\nprint(col_r2, col_r2.shape)  # [[ 2]\n                             #  [ 6]\n                             #  [10]] (3, 1)\n</code></pre>\n<h2 id=\"integer-array-indexing\">Integer array indexing</h2>\n<p>\n  Khi bạn truy xuất mảng dùng slicing, kết quả trả về sẽ là mảng con của mảng\n  ban đầu, tuy nhiên sử dụng chỉ số mảng cho phép bạn xây dựng mảng tùy ý từ một\n  mảng khác\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\na = np.array([[1,2], [3, 4], [5, 6]])\n\n# Truy xuất mảng dùng chỉ số.\n# Kết quả thu được là 1 mảng có shape (3,)\nprint(a[[0, 1, 2], [0, 1, 0]])  # Prints &quot;[1 4 5]&quot;\n\n# Sẽ thu được kết quả tương đương như trên với cách này:\nprint(np.array([a[0, 0], a[1, 1], a[2, 0]]))  # Prints &quot;[1 4 5]&quot;\n\n# Bạn được phép sử dụng chỉ số mảng để\n# truy xuất tới 1 phần tử\n# của mảng gốc nhiều hơn 1 lần\nprint(a[[0, 0], [1, 1]])  # Prints &quot;[2 2]&quot;\n\n# Một cách làm khác tương đương:\nprint(np.array([a[0, 1], a[0, 1]]))  # Prints &quot;[2 2]&quot;\n</code></pre>\n<p>\n  Một mẹo hữu ích dùng chỉ số mảng để chọn và thay đổi phần tử từ mỗi hàng của\n  ma trận.\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\n# Tạo một mảng mới từ đó ta sẽ chọn các phần tử\na = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])\n\nprint(a)  # prints &quot;array([[ 1,  2,  3],\n          #                [ 4,  5,  6],\n          #                [ 7,  8,  9],\n          #                [10, 11, 12]])&quot;\n\n# Tạo một mảng các chỉ số\nb = np.array([0, 2, 0, 1])\n\n# Lấy 1 phần tử từ mỗi hàng của a dùng với chỉ số ở mảng b\nprint(a[np.arange(4), b])  # Prints &quot;[ 1  6  7 11]&quot;\n\n# Thay đổi một phẩn tử từ mỗi hàng của a dùng với chỉ số ở mảng b\na[np.arange(4), b] += 10\n\nprint(a)  # prints &quot;array([[11,  2,  3],\n          #                [ 4,  5, 16],\n          #                [17,  8,  9],\n          #                [10, 21, 12]])\n</code></pre>\n<h2 id=\"boolean-array-indexing\">Boolean array indexing</h2>\n<p>\n  Cho phép bạn chọn ra các phần tử tùy ý của một mảng, thường được sử dụng để\n  chọn ra các phần tử thỏa mãn điều kiện nào đó\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\na = np.array([[1,2], [3, 4], [5, 6]])\n\nbool_idx = (a &gt; 2)   # Tìm các phần tử lớn hơn 2;\n                     # Trả về 1 numpy array of Booleans có shape như mảng a\n                     # và giá trị tại mỗi phần tử là\n                     # True nếu phần tử của a tại đó &gt; 2,\n                     # False cho trường hợp ngược lại.\n\nprint(bool_idx)      # Prints &quot;[[False False]\n                     #          [ True  True]\n                     #          [ True  True]]&quot;\n\n# Sử dụng một boolean array indexing để lấy\n# các phần tử thỏa mãn điều kiện nhất định trong a\n# Ví dụ ở đây in ra các giá trị của a &gt; 2\n# sử dụng array bool_idx đã tạo\nprint(a[bool_idx])  # Prints &quot;[3 4 5 6]&quot;\n\n# Một cách ngắn gọn hơn:\nprint(a[a &gt; 2])     # Prints &quot;[3 4 5 6]&quot;\n</code></pre>\n<p>\n  Nếu bạn muốn tìm hiều nhiều hơn về numpy array indexing bạn có thể tham khảo\n  tại\n  <a href=\"https://numpy.org/doc/stable/reference/arrays.indexing.html\"\n     target=\"_blank\"\n    >Numpy documentation</a\n  >.\n</p>\n<h1 id=\"data-types\">Data types</h1>\n<p>\n  Mỗi numpy array là một lưới các phần tử cùng kiểu dữ liệu. Numpy cung cấp một\n  tập hợp lớn các kiểu dữ liệu số mà bạn có thể sử dụng để xây dựng các mảng.\n  Numpy cố gắng đoán một kiểu dữ liệu khi bạn tạo một mảng, nhưng các hàm xây\n  dựng các mảng thường cũng bao gồm một đối số tùy chọn để chỉ định rõ ràng kiểu\n  dữ liệu\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\nx = np.array([1, 2])   # Để numpy xác định kiểu dữ liệu\nprint(x.dtype)         # Prints &quot;int64&quot;\n\nx = np.array([1.0, 2.0])   # Để numpy xác định kiểu dữ liệu\nprint(x.dtype)             # Prints &quot;float64&quot;\n\nx = np.array([1, 2], dtype=np.int64)   # Chỉ định kiều dữ liệu củ thể cho mảng\nprint(x.dtype)                         # Prints &quot;int64&quot;\n</code></pre>\n<h1 id=\"array-math\">Array math</h1>\n<p>\n  Ghép, cộng, nhân, hoán vị chỉ với một dòng code. Dưới đây là một số ví dụ về\n  các phép toán số học và nhân khác nhau với các mảng Numpy\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\nx = np.array([[1,2],[3,4]], dtype=np.float64)\ny = np.array([[5,6],[7,8]], dtype=np.float64)\n\n# Tổng của 2 mảng, cả 2 cách cho cùng một kết quả\n# [[ 6.0  8.0]\n#  [10.0 12.0]]\nprint(x + y)\nprint(np.add(x, y))\n\n# Hiệu 2 mảng\n# [[-4.0 -4.0]\n#  [-4.0 -4.0]]\nprint(x - y)\nprint(np.subtract(x, y))\n\n# Tính tích từng phần tử của x nhân với từng phần tử của y\n# [[ 5.0 12.0]\n#  [21.0 32.0]]\nprint(x * y)\nprint(np.multiply(x, y))\n\n# Tương tự thương của từng phần x chia với từng phần tử y\n# [[ 0.2         0.33333333]\n#  [ 0.42857143  0.5       ]]\nprint(x / y)\nprint(np.divide(x, y))\n\n# Bình phương từng phần tử trong x\n# [[ 1.          1.41421356]\n#  [ 1.73205081  2.        ]]\nprint(np.sqrt(x))\n</code></pre>\n<p>\n  Để nhân 2 ma trận hoặc nhân vector với ma trận trong numpy, chúng ta sử dụng\n  hàm <code>dot</code>\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\nx = np.array([[1,2],[3,4]])\ny = np.array([[5,6],[7,8]])\n\nv = np.array([9,10])\nw = np.array([11, 12])\n\n# Tích trong của 2 vector; Cả 2 đều cho kết quả là 219\nprint(v.dot(w))\nprint(np.dot(v, w))\n\n# Nhân ma trận với vector; cả 2 đều cho mảng rank 1: [29 67]\nprint(x.dot(v))\nprint(np.dot(x, v))\n\n# Ma trận với ma trận; cả 2 đều cho mảng rank 2\n# [[19 22]\n#  [43 50]]\nprint(x.dot(y))\nprint(np.dot(x, y))\n</code></pre>\n<p>\n  Numpy cung cấp nhiều hàm hữu ích để thực hiện tính toán trên mảng; một trong\n  những hàm hữu ích nữa là <code>sum</code>\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\nx = np.array([[1,2],[3,4]])\n\nprint(np.sum(x))  # Tổng các phần tử của mảng; prints &quot;10&quot;\nprint(np.sum(x, axis=0))  # Tính tổng theo từng cột; prints &quot;[4 6]&quot;\nprint(np.sum(x, axis=1))  # Tính tổng theo từng hàng; prints &quot;[3 7]&quot;\n</code></pre>\n<p>\n  Bạn có thể tìm thấy danh sách đầy đủ các hàm toán học được cung cấp bởi numpy\n  tại\n  <a href=\"https://numpy.org/doc/stable/reference/routines.math.html\"\n     target=\"_blank\"\n    >Numpy documentation</a\n  >\n</p>\n<h1 id=\"array-manipulation\">Array manipulation</h1>\n<p>\n  Ngoài việc tính toán trên mảng, chúng ta thường xuyên phải định hình lại hoặc\n  thao tác dữ liệu theo mảng. Ví dụ đơn giản nhất của loại hoạt động này là\n  chuyển vị ma trận; để chuyển vị một ma trận, chỉ cần sử dụng thuộc tính T của\n  một đối tượng mảng\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\nx = np.array([[1,2], [3,4]])\nprint(x) # Prints &quot;[[1 2]\n            #          [3 4]]&quot;\nprint(x.T) # Prints &quot;[[1 3]\n            #          [2 4]]&quot;\n\n# Việc chuyển vị 1 mảng có rank = 1 không thay đổi gì cả:\n\nv = np.array([1,2,3])\nprint(v) # Prints &quot;[1 2 3]&quot;\nprint(v.T) # Prints &quot;[1 2 3]&quot;\n</code></pre>\n<p>\n  Numpy cung cấp nhiều hàm hơn để thao tác các mảng; bạn có thể xem danh sách\n  đầy đủ tại\n  <a\n    href=\"https://numpy.org/doc/stable/reference/routines.array-manipulation.html\"\n    target=\"_blank\"\n    >Numpy documentation</a\n  >.\n</p>\n<h1 id=\"broadcasting\">Broadcasting</h1>\n<p>\n  <strong>Broadcasting</strong> là một cơ chế mạnh mẽ cho phép thực thi các phép\n  toán số học trên các numpy array có kích thước khác nhau. Chúng ta thường có\n  một mảng nhỏ hơn và một mảng lớn hơn và chúng tôi muốn sử dụng mảng nhỏ hơn\n  nhiều lần để thực hiện một số thao tác trên mảng lớn hơn.\n</p>\n<p>\n  <strong>Ví dụ</strong>: Giả sử rằng chúng ta muốn thêm một vectơ không đổi vào\n  mỗi hàng của ma trận. Chúng ta có thể làm như thế này\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\n# Chúng ta sẽ thêm vector v vào mỗi hàng của ma trận x,\n# Lưu trữ kết quả trong ma trận y\nx = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])\nv = np.array([1, 0, 1])\ny = np.empty_like(x)   # Tạo một ma trận rỗng có shape như x\n\n# Thêm vector v vào mỗi hàng của ma trận x bằng một vòng lặp\nfor i in range(4):\n    y[i, :] = x[i, :] + v\n\n# Ma trận y sẽ như sau\n# [[ 2  2  4]\n#  [ 5  5  7]\n#  [ 8  8 10]\n#  [11 11 13]]\nprint(y)\n</code></pre>\n<p>\n  Cách này hoạt động bình thường, khi ma trận x quá lớn, việc sử dụng vòng lặp\n  này sẽ rất chậm. Nếu bạn để ý thì việc thêm vectơ v vào mỗi hàng của ma trận x\n  tương đương với việc tạo một ma trận vv bằng cách xếp chồng nhiều bản sao của\n  v theo chiều dọc, sau đó thực hiện phép tính tổng của x và vv. Chúng ta có thể\n  thực hiện phương pháp này như thế này\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\n# Chúng ta sẽ thêm vector v vào mỗi hàng của ma trận x,\n# Lưu trữ kết quả trong ma trận y\nx = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])\nv = np.array([1, 0, 1])\nvv = np.tile(v, (4, 1))   # Xếp chồng 4 bản sao của v lên nhau\nprint(vv)                 # Prints &quot;[[1 0 1]\n                          #          [1 0 1]\n                          #          [1 0 1]\n                          #          [1 0 1]]&quot;\ny = x + vv  # Thực hiện phép cộng\nprint(y)  # Prints &quot;[[ 2  2  4\n          #          [ 5  5  7]\n          #          [ 8  8 10]\n          #          [11 11 13]]&quot;\n</code></pre>\n<p>\n  <strong>Numpy broadcasting</strong> cho phép chúng ta thực thi tính toán này\n  mà không cần phải tạo ra nhiều bản sao của v. Và đây là code khi sử dụng\n  <strong>broadcasting</strong>\n</p>\n<pre><code class=\"language-py\">import numpy as np\n\n# Chúng ta sẽ thêm vector v vào mỗi hàng của ma trận x,\n# Lưu trữ kết quả trong ma trận y\nx = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])\nv = np.array([1, 0, 1])\ny = x + v  # Thêm v vào từng hàng của x sử dụng broadcasting\nprint(y)  # Prints &quot;[[ 2  2  4]\n          #          [ 5  5  7]\n          #          [ 8  8 10]\n          #          [11 11 13]]&quot;\n</code></pre>\n<p>\n  Về nguyên tắc thực thi của broadcasting bạn có thể tham khảo tại\n  <a href=\"https://numpy.org/doc/stable/user/basics.broadcasting.html\"\n     target=\"_blank\"\n    >Numpy documentation</a\n  >.\n</p>\n<p>\n  Các hàm hỗ trợ broadcasting được gọi là universal functions. Bạn có thể tìm\n  danh sách các hàm universal functions tại\n  <a href=\"https://numpy.org/doc/stable/reference/ufuncs.html#available-ufuncs\"\n     target=\"_blank\"\n    >Numpy documentation</a\n  >.\n</p>\n<h1 id=\"ket-luan\">Kết luận</h1>\n<p>\n  Nói tóm lại, khi học bất cứ công nghệ mới nào, hãy đọc documentation. Công\n  nghệ mới càng ra đời thì documentation được viết càng kỹ, xúc tích và dễ hiểu,\n  luôn có ví dụ đi kèm. Vậy nên đừng ngại nhiều chữ mà lười đọc docs nhé \uD83D\uDE09. Đọc\n  docs là một kỹ năng sống còn của coder đấy.\n</p>\n<p>\n  <img\n    src=\"https://i.postimg.cc/wj40F8QS/Egve-NBUUMAAg-Aea.jpg\"\n    alt=\"Read documentation meme\"\n  />\n</p>\n<p>\n  Btw, đọc full numpy docs tại\n  <a href=\"https://numpy.org/doc/stable/index.html\" target=\"_blank\">đây</a> nhé!\n</p>\n</div>",
+    "authorName": "Tu Bui",
+    "timeRelease": "2021-11-02T13:40:50Z",
+    "timeCreate": "2021-11-02T01:17:32Z",
+    "title": "Tìm hiểu về thư viện Numpy trong Python: NumPy Arrays",
+    "subTitle": "Trong số hàng triệu thư viện hỗ trợ Python thì có một thư viện lại gần như được đóng đinh mà bắt buộc lập trình viên nào khi làm việc với Python cũng cần phải tìm hiểu đó chính là thư viện NumPy.",
+    "coverImgUrl": "https://i.postimg.cc/1X0RxN2h/sv-2.jpg",
+    "thumbnailImgUrl": "https://i.postimg.cc/fbt7W3Qb/105040771-43887300-5a88-11eb-9f01-bee100b9ef22.png",
+    "blogTag": ["Python", "Data Science", "Data Structures"]
+  },
+  {
+    "id": 15542496,
+    "rawContent": "<div class=\"post-body\" \"line-number\">\n    <figure>\n        <img\n                src=\"https://i.postimg.cc/28YRybpq/d6668078-23db-42d3-b311-ea0a97dbd6e6.gif\"\n                alt=\"Event loop và Callback queue\"\n        />\n        <figcaption>Asynchronous JavaScript</figcaption>\n    </figure>\n\n    <h1 id=\"gioi-thieu\">Giới thiệu</h1>\n\n    <p>\n        <strong>JavaScript</strong> là một ngôn ngữ lập trình đơn luồng có nghĩa là\n        chỉ có một điều có thể xảy ra tại một thời điểm. Tức là, JavaScript engine\n        chỉ có thể xử lý một câu lệnh tại một thời điểm trong một luồng duy nhất.\n    </p>\n\n    <p>\n        Mặc dù ngôn ngữ đơn luồng đơn giản hóa việc viết code do bạn không cần lo\n        lắng về các vấn đề tương tranh, điều này cũng có nghĩa là bạn không thể thực\n        hiện các tác vụ dài như truy cập mạng mà không chặn luồng chính.\n    </p>\n\n    <p>\n        Hãy tưởng tượng bạn request dữ liệu từ một API. Tùy thuộc vào tình hình máy\n        chủ có thể mất một thời gian để xử lý request trong khi chặn luồng chính làm\n        cho trang web không hồi đáp.\n    </p>\n\n    <p>\n        Đó là lý do asynchronous JavaScript xuất hiện. Sử dụng asynchronous\n        JavaScript (callbacks, promises, and async/await) bạn có thể thực hiện các\n        request network dài mà không chặn luồng chính.\n    </p>\n\n    <h1 id=\"synchronous-javascript\">Synchronous Javascript</h1>\n\n    <p>\n        Trước khi đi sâu vào asynchronous JavaScript, ta cần hiểu cách mà\n        synchronous JavaScript code được thực thi trong JavaScript engine. Ví dụ:\n    </p>\n\n    <pre><code class=\"language-javascript\">const second = () =&gt; {\n    console.log('Hello there!');\n}\nconst first = () =&gt; {\n    console.log('Hi there!');\n    second();\n    console.log('The End');\n}\nfirst();\n</code></pre>\n\n    <p>\n        Để hiểu đoạn code trên được thực thi như thế nào trong JavaScript engine,\n        chúng ta phải hiểu khái niệm về <strong>execution context</strong> và\n        <strong>call stack</strong>.\n    </p>\n\n    <h2 id=\"execution-context\">Execution Context</h2>\n\n    <p>\n        <strong>Execution Context</strong> là một khái niệm trừu tượng về môi trường\n        nơi JavaScript code được đánh giá và thực hiện. Bất cứ khi nào code được\n        thực thi trong JavaScript, nó chạy trong một <em>execution context</em>.\n    </p>\n\n    <p>\n        Code global thực thi trong một global execution context, và code toàn cục\n        thực hiện trong một local execution context toàn cục. Mỗi hàm có một\n        execution context riêng của nó.\n    </p>\n\n    <h2 id=\"call-stack\">Call Stack</h2>\n\n    <p>\n        <strong>Call stack</strong> như tên gọi của nó là một stack với cấu trúc\n        <em>LIFO (Last in First out)</em> được sử dụng để lưu trữ tất cả các\n        execution context được tạo ra trong quá trình thực thi code.\n    </p>\n\n    <blockquote>\n        <p>\n            JavaScript có một call stack duy nhất vì nó là một ngôn ngữ lập trình đơn\n            luồng. Call Stack có cấu trúc LIFO nghĩa là các mục chỉ có thể được thêm\n            hoặc xóa khỏi đầu stack.\n        </p>\n    </blockquote>\n\n    <p>\n        Hãy quay lại đoạn mã trên và tìm hiểu cách code được thực thi bên trong\n        JavaScript engine.\n    </p>\n\n    <figure>\n        <img\n                src=\"https://i.postimg.cc/523LSZ88/e6a202c0-2dbc-4ec0-af91-0fc89500fb72.webp\"\n                alt=\"Call stack\"\n        />\n        <figcaption>Call stack khi chạy đoạn code trên</figcaption>\n    </figure>\n\n    <ul>\n        <li>\n            <p>Khi đoạn code trên được thực thi, một\n                <em>local execution context</em> được tạo ra (biểu diễn bằng hàm\n                <code>main()</code>) và được đẩy vào đầu stack. Khi hàm\n                <code>first()</code> được gọi, nó được đẩy vào đầu stack.</p>\n        </li>\n        <li>\n            <p>\n                Tiếp theo, <code>console.log('Hi there!')</code> được đẩy vào đầu stack,\n                khi kết thúc, nó được lấy ra từ stack. Sau đó hàm\n                <code>second()</code> được gọi và nó được đẩy vào đầu của stack.\n            </p>\n\n        </li>\n        <li>\n            <p>\n            <code>console.log('Hello there!')</code> được đẩy vào đầu stack là lấy\n            ra khi nó kết thúc. Hàm <code>second()</code> kết thúc, do đó nó được\n            lấy ra khỏi stack.</p>\n        </li>\n        <li>\n            <p><code>console.log(‘The End’)</code> được đẩy vào đầu của stack và xóa đi\n            khi nó kết thúc. Sau đó, hàm <code>first()</code> kết thúc và nó được\n            lấy ra khỏi stack.</p>\n        </li>\n        <li>\n            <p>Chương trình thực hiện xong ở đây và\n            <em>local execution context</em> (<code>main()</code>) được lấy ra khỏi\n            stack.</p>\n        </li>\n    </ul>\n\n    <p>\n        Đến đây ta đã có ý tưởng cơ bản về <strong>call stack</strong> và JavaScript\n        đồng bộ hoạt động như thế nào, hãy quay trở lại với JavaScript bất đồng bộ.\n    </p>\n\n    <h1 id=\"asynchronous-javascript\">Asynchronous Javascript</h1>\n\n    <h2 id=\"blocking\">Blocking</h2>\n\n    <p>\n        Giả sử ta đang xử lý hình ảnh hay thực hiện network request theo cách đồng\n        bộ:\n    </p>\n\n    <pre><code class=\"language-javascript\">const processImage = (image) =&gt; {\n/**\n* doing some operations on image\n**/\nconsole.log('Image processed');\n}\nconst networkRequest = (url) =&gt; {\n/**\n* requesting network resource\n**/\nreturn someData;\n}\nconst greeting = () =&gt; {\nconsole.log('Hello World');\n}\nprocessImage(logo.jpg);\nnetworkRequest('www.somerandomurl.com');\ngreeting();\n</code></pre>\n\n    <p>\n        Việc xử lý hình ảnh và network request cần có thời gian. Vì vậy, khi hàm\n        <code>processImage()</code> được gọi, sẽ mất một chút thời gian tùy thuộc\n        vào kích thước của hình ảnh.\n    </p>\n\n    <p>\n        Khi hàm <code>processImage()</code> hoàn thành, nó sẽ bị xóa khỏi stack, sau\n        đó hàm <code>networkRequest()</code> được gọi và được đẩy vào stack, một lần\n        nữa cũng sẽ mất một thời gian để nó thực thi xong.\n    </p>\n\n    <p>\n        Cuối cùng khi hàm <code>networkRequest()</code> hoàn thành, hàm\n        <code>greeting()</code> được gọi và nó chỉ thực thi một câu lệnh\n        <code>console.log</code> và các câu lệnh <code>console.log</code> nói chung\n        là nhanh, do đó hàm <code>greeting()</code> thực hiện xong ngay lập tức và\n        kết thúc.\n    </p>\n\n    <p>\n        Như đã thấy, chúng ta phải chờ các hàm <code>processImage()</code> và\n        <code>networkRequest()</code> kết thúc. Điều này có nghĩa là các hàm này\n        đang chặn <strong>call stack</strong> hay luồng chính. Do đó chúng ta không\n        thể thực hiện hoạt động khác khi code trên đang thực hiện.\n    </p>\n\n    <h2 id=\"giai-phap-cho-blocking\">Giải pháp cho blocking</h2>\n\n    <p>\n        Giải pháp đơn giản nhất là <strong>callbacks không đồng bộ</strong>. Ta sử\n        dụng asynchronous callbacks để làm cho code trở thành\n        <strong>non-blocking</strong>. Ví dụ:\n    </p>\n\n    <pre><code class=\"language-javascript\">const networkRequest = () =&gt; {\n    setTimeout(() =&gt; {\n        console.log('Async Code');\n    }, 2000);\n};\nconsole.log('Hello World');\nnetworkRequest();\n</code></pre>\n\n    <p>\n        Ở đây, phương thức <code>setTimeout</code> được sử dụng để mô phỏng network\n        request. Cần nhớ rằng <code>setTimeout</code> không phải là một phần của\n        Javascript engine. Nó là một phần của web APIs và C/C++ APIs.\n    </p>\n\n    <p>\n        Để hiểu đoạn code này được thực thi như thế nào, chúng ta cần hiểu một vài\n        khái niệm khác như <strong>event loop</strong> và\n        <strong>callback queue</strong> (hay <em>message queue</em>)\n    </p>\n\n    <figure>\n        <img\n                src=\"https://i.postimg.cc/yxcv1vtn/97f2b2fc-d251-489e-ab2e-f799a0803931.webp\"\n                alt=\"Event loop và Callback queue\"\n                title=\"\"\n        />\n        <figcaption>Event loop và Message queue</figcaption>\n    </figure>\n\n    <p>\n        <code>event loop</code>, <code>web APIs</code> và\n        <code>message queue</code> không phải là một phần của JavaScript engine, nó\n        là một phần của môi trường thực thi Javascript của browser hay môi trường\n        thực thi Nodejs JavaScript (trong trường hợp Nodejs). Trong Nodejs, web APIs\n        được thay thế bởi C/C++ APIs.\n    </p>\n\n    <p>\n        Bây giờ hãy trở lại với đoạn code trên và xem xét nó được thực thi như thế\n        nào theo cách bất đồng bộ:\n    </p>\n\n    <pre><code class=\"language-javascript\">const networkRequest = () =&gt; {\n    setTimeout(() =&gt; {\n        console.log('Async Code');\n    }, 2000);\n};\nconsole.log('Hello World');\nnetworkRequest();\nconsole.log('The End');\n</code></pre>\n\n    <figure>\n        <img\n                src=\"https://i.postimg.cc/28YRybpq/d6668078-23db-42d3-b311-ea0a97dbd6e6.gif\"\n                alt=\"Event loop và Callback queue\"\n                title=\"\"\n        />\n        <figcaption>Event loop và Message queue bất đồng bộ</figcaption>\n    </figure>\n\n    <p>\n        Khi đoạn code trên được load vào trình duyệt,\n        <code>console.log(‘Hello World’)</code> được đẩy vào stack và lấy ra khi nó\n        kết thúc. Tiếp theo, <code>hàm networkRequest()</code> được gọi và nó được\n        đẩy vào đầu stack.\n    </p>\n\n    <p>\n        Tiếp theo, hàm <code>setTimeout()</code> được gọi, nó được đẩy vào đầu\n        stack. Hàm <code>setTimeout()</code> có hai tham số 1) callback và 2) thời\n        gian với đơn vị mili giây.\n    </p>\n\n    <p>\n        Hàm <code>setTimeout()</code> bắt đầu hẹn giờ 2s trong môi trường web APIs.\n        Tại thời điểm này, <code>setTimeout()</code> kết thúc và được lấy ra khỏi\n        stack. Sau đó <code>console.log('The End')</code> được đẩy vào stack, thực\n        thi và xóa khỏi stack sau khi nó hoàn tất.\n    </p>\n\n    <p>\n        Trong khi đó, bộ hẹn giờ đến hạn và <code>callback</code> được đẩy vào\n        <strong>message queue</strong>. Nhưng <code>callback</code> không được thực\n        hiện ngay lập tức và đó là nơi <strong>event loop</strong> được khởi động.\n    </p>\n\n    <h2 id=\"event-loop\">Event Loop</h2>\n\n    <p>\n        Công việc của <strong>event loop</strong> là nhìn vào\n        <strong>call stack</strong> và xác định xem call stack có trống hay không.\n        Nếu call stack trống, nó sẽ nhìn vào <strong>mesage queue</strong> để xem có\n        bất kỳ <code>callback</code> nào đang chờ xử lý để thực hiện nó.\n    </p>\n\n    <p>\n        Trong trường hợp này, message queue có chứa 1 <code>callback</code> còn call\n        stack thì trống rỗng. Do đó event loop đẩy <code>callback</code> vào đầu\n        stack.\n    </p>\n\n    <p>\n        <code>console.log(‘Async Code’)</code> được đẩy vào đầu stack, thực thi và\n        lấy ra khỏi stack. Tại đây, <code>callback</code> kết thúc và được lấy ra\n        khỏi stack và chương trình kết thúc.\n    </p>\n\n    <p>\n        Message queue cũng chứa các <code>callback</code> từ các DOM events như\n        event click và event keyboard. Ví dụ:\n    </p>\n\n    <pre><code class=\"language-javascript\">document.querySelector('.btn').addEventListener('click',(event) =&gt; {\n    console.log('Button Clicked');\n});\n</code></pre>\n\n    <p>\n        Trong trường hợp DOM events, <em>event listener</em> đặt ở môi trường web\n        APIs chờ một event cụ thể xảy ra. Và khi nó xảy ra, hàm\n        <code>callback</code> được đặt vào message queue và chờ được thực thi. Một\n        lần nữa event loop sẽ kiểm tra xem call stack có trống không và đẩy\n        <code>callback</code> vào stack nếu nó trống và <code>callback</code> được\n        thực thi.\n    </p>\n\n    <h2 id=\"delay-thuc-thi-ham\">Delay thực thi hàm</h2>\n\n    <p>\n        Chúng ta cũng có thể sử dụng <code>setTimeout</code> để trì hoãn việc thực\n        thi hàm cho đến khi stack trống. Ví dụ:\n    </p>\n\n    <pre><code class=\"language-javascript\">const bar = () =&gt; {\n    console.log('bar');\n}\nconst baz = () =&gt; {\n    console.log('baz');\n}\nconst foo = () =&gt; {\n    console.log('foo');\n    setTimeout(bar, 0);\n    baz();\n}\nfoo();\n</code></pre>\n\n    <p>Kết quả là:</p>\n    <pre><code class=\"language-javascript\">foo\nbaz\nbar\n</code></pre>\n\n    <p>\n        Khi code này chạy, đầu tiên <code>foo()</code> được gọi, bên trong foo chúng\n        ta gọi <code>console.log('foo')</code>, sau đó\n        <code>setTimeout()</code> được gọi với <code>bar()</code> là\n        <code>callback</code> và bộ đếm thời gian 0 giây.\n    </p>\n\n    <p>\n        Bây giờ nếu chúng ta không sử dụng <code>setTimeout</code>, hàm\n        <code>bar()</code> sẽ được thực hiện ngay lập tức, nhưng việc sử dụng\n        <code>setTimeout</code> với bộ đếm thời gian 0 giây giúp trì hoãn việc thực\n        hiện <code>bar()</code> cho đến khi stack trống.\n    </p>\n\n    <p>\n        Sau 0 giây, <code>callback</code> <code>bar ()</code> được đưa vào message\n        queue đang đợi để được thực thi. Nhưng nó sẽ chỉ được thực hiện khi stack\n        hoàn toàn trống rỗng sau khi hàm <code>baz</code> và <code>foo</code> kết\n        thúc.\n    </p>\n\n    <h2 id=\"es6-job-queue\">ES6 Job Queue</h2>\n\n    <p>\n        Chúng ta đã học được cách các <code>callback</code> không đồng bộ và các DOM\n        events được thực thi, sử dụng message queue để lưu trữ tất cả các\n        <code>callback</code> chờ đợi để được thực thi.\n    </p>\n\n    <p>\n        <strong><a href=\"http://es6-features.org/\" target=\"_blank\">ES6</a></strong> giới thiệu khái\n        niệm về <strong>job queue</strong> được sử dụng bởi\n        <strong>Promises</strong> trong JavaScript.\n    </p>\n\n    <blockquote>\n        <p>\n            Sự khác biệt giữa message queue và job queue là job queue có mức ưu tiên\n            cao hơn message queue, có nghĩa là các <em>promise job</em> bên trong job\n            queue sẽ được <strong>thực thi trước</strong> các <em>callback</em> bên\n            trong message queue.\n        </p>\n    </blockquote>\n\n    <p>Ví dụ:</p>\n\n    <pre><code class=\"language-javascript\">const bar = () =&gt; {\n    console.log('bar');\n};\nconst baz = () =&gt; {\n    console.log('baz');\n};\nconst foo = () =&gt; {\n    console.log('foo');\n    setTimeout(bar, 0);\n    new Promise((resolve, reject) =&gt; {\n        resolve('Promise resolved');\n    }).then(res =&gt; console.log(res))\n    .catch(err =&gt; console.log(err));\n    baz();\n};\nfoo();\n</code></pre>\n    <p>Kết quả là:</p>\n    <pre><code class=\"language-javascript\">foo\nbaz\nPromised resolved\nbar\n</code></pre>\n\n    <p>\n        Chúng ta có thể thấy rằng <code>promise</code> được thực hiện trước\n        <code>setTimeout</code>, bởi vì <code>promise</code> response được lưu trữ\n        bên trong job queue có mức độ ưu tiên cao hơn message queue.\n    </p>\n\n    <h1 id=\"ket-luan\">Kết luận</h1>\n\n    <p>\n        Chúng ta đã học được cách JavaScript không đồng bộ hoạt động và các khái\n        niệm khác như call stack, event loop, message queue và job queue cùng nhau\n        tạo ra môi trường chạy JavaScript. Những khái niệm này rất hữu ích và quan\n        trọng để bạn học hỏi sâu hơn về Javascript, đặc biệt là khi sử dụng NodeJS.\n    </p>\n</div>\n",
+    "authorName": "Tu Bui",
+    "timeRelease": "2021-11-02T13:40:50Z",
+    "timeCreate": "2021-11-02T02:21:50Z",
+    "title": "Hiểu về Cơ chế Bất đồng bộ Asynchronous JavaScript",
+    "subTitle": "Sử dụng asynchronous JavaScript (callbacks, promises, and async/await) bạn có thể thực hiện các request network dài mà không chặn luồng chính.",
+    "coverImgUrl": "https://i.postimg.cc/1X0RxN2h/sv-2.jpg",
+    "thumbnailImgUrl": "https://i.postimg.cc/28YRybpq/d6668078-23db-42d3-b311-ea0a97dbd6e6.gif",
+    "blogTag": ["Javascript", "Web Development"]
+  }
+]

@@ -1,0 +1,130 @@
+[
+  {
+    "id":1,
+    "title": "Talkshow with Google Tensorflow Developer Le Viet Gia Khanh",
+    "imageUrl": "https://i.postimg.cc/256xf2kj/AskMeAny.jpg",
+    "time": "2020-11-08T0710:00:00Z",
+    "description": "BẠN ĐÃ SẴN SÀNG THAM GIA TALKSHOW CÙNG VỚI CHUYÊN GIA TENSORFLOW TỪ GOOGLE DEVELOPERS?\n\uD83D\uDC49Với sự bùng nổ của lĩnh vực Trí Tuệ Nhân Tạo – A.I. trong thập kỷ vừa qua, machine learning và deep learning rõ ràng cũng phát triển theo cùng. Ở thời điểm hiện tại, TensorFlow chính là thư viện mã nguồn mở cho machine learning nổi tiếng nhất thế giới, được phát triển bởi các nhà nghiên cứu từ Google.\n\uD83D\uDC49Và trong buổi trò chuyện lần này người sẽ truyền cảm hứng cũng như đóng vai trò cung cấp kiến thức học thuật, giúp cho các bạn sinh viên có thể tiếp cận với lĩnh vực kể trên là diễn giả của chúng ta - anh Lê Viết Gia Khánh\n\uD83D\uDC49Đôi điều giới thiệu về anh Lê Viết Gia Khánh để chúng ta cùng biết nhé !\n\uD83C\uDF93Tốt nghiệp cử nhân tại Đại học Tokyo, chuyên ngành Vật lý ứng dụng.\n\uD83C\uDF93Tham gia thuyết trình tại các sự kiện công nghệ lớn như Google I/O, viết code mẫu cho sản phẩm của Google\n\uD83C\uDF93Từng làm kỹ sư phát triển phần mềm IOS tại Recruit, và trước đó là Tư vấn công nghệ tại SigmaXYZ.\n\uD83C\uDF93Đồng sáng lập Vietnamese Professionals in Japan (VPJ), cộng đồng người Việt làm việc tại Nhật Bản, tổ chức các sự kiện phát triển nghề nghiệp để hỗ trợ người Việt trẻ phát triển sự nghiệp tại Nhật.\n\uD83C\uDF93Hiện là TensorFlow Developer Advocate tại Google, hỗ trợ các nhà phát triển phần mềm tại châu Á Thái Bình Dương áp dụng trí tuệ nhân tạo vào sản phẩm.\n\uD83D\uDC49Các bạn có thể tìm hiểu thêm về anh Lê Viết Gia Khánh tại đây: https://bit.ly/31T8P5H\n\uD83D\uDC49Đến với buổi trao đổi, các bạn sẽ được:\n\uD83D\uDD30Trau dồi kiến thức về ML/AI\n\uD83D\uDD30Học hỏi cách sử dụng thư viện TensorFlow và nền tảng Firebase trong ML/AI\n\uD83D\uDD30Tìm hiểu về việc tương lai theo hướng ML/Công nghệ\n\uD83D\uDD30Chia sẻ về cơ hội làm việc tại Nhật Bản và nước ngoài.\n\uD83D\uDC49Thông tin chi tiết:\nThời gian: 10h00 ngày 08/11/2020 thông qua Google Meet.",
+    "location": {
+      "name": "Online",
+      "address": "Google Meet"
+    },
+    "organizers": ["GDSCxHUST"],
+    "guests": [
+      {
+        "avatarUrl": "https://i.postimg.cc/xTXJYhH4/speaker-le-viet-gia-khanh.jpg",
+        "name": "Le Viet Gia Khanh",
+        "role": "speaker",
+        "company": "TensorFlow Developer"
+      },
+      {
+        "avatarUrl": "https://i.postimg.cc/8zXN6rrh/D7-C9-FD8-E-99-B6-4673-8608-3-B05-DBF5-EBFE.jpg",
+        "name": "Linh Cam Nhung",
+        "role": "host",
+        "company": ""
+      }
+    ],
+    "eventUrl": {
+      "info": "https://www.facebook.com/events/468280964147788",
+      "register": ""
+    }
+  },
+  {
+    "id":2,
+    "title": "Workshop Học máy và Trí tuệ nhân tạo",
+    "imageUrl": "https://i.postimg.cc/hPQLMfCv/WSML.jpg",
+    "time": "2021-04-10T09:00:00Z",
+    "description": "❗ Lĩnh vực Học máy và trí tuệ nhân tạo đang phát triển mạnh mẽ và tạo ra nhiều cơ hội cho ngành công nghệ thông tin, đặc biệt đối với các nước đang phát triển như Việt Nam. Vậy, các bạn trẻ đam mê lĩnh vực này hoặc đơn giản muốn dấn thân thử thách những điều mới, bạn đã có kế hoạch gì cho mình trên hành trình này chưa?\n❓Nếu bạn là:\n✨ Sinh viên năng động, nhiệt huyết và sẵn sàng dấn thân vào mọi thử thách\n✨ Sinh viên năm 3, năm 4 đang đứng trước những khó khăn cho kỳ thực tập giữa khóa hay sự nghiệp lâu dài\n✨ Có khả năng sáng tạo, học hỏi, cầu tiến và tinh thần trách nhiệm cao.\n➤ Đừng bỏ qua cơ hội tham gia cuộc hành trình lần này do TensorFlow User Group Vietnam , GDG Hà Nội và Google Developer Student Clubs HUST với sự hợp tác cùng Trung Tâm Đổi Mới Sáng Tạo Quốc gia tổ chức. Tất cả những thắc mắc sẽ được giải đáp trong chuyến tàu DSC HUST- 1004 với chủ đề: \uD835\uDC0C\uD835\uDC00\uD835\uDC02\uD835\uDC07\uD835\uDC08\uD835\uDC0D\uD835\uDC04 \uD835\uDC0B\uD835\uDC04\uD835\uDC00\uD835\uDC11\uD835\uDC0D\uD835\uDC08\uD835\uDC0D\uD835\uDC06 \uD835\uDC00\uD835\uDC0D\uD835\uDC03 \uD835\uDC00\uD835\uDC08\n\uD83D\uDC8C Link đăng ký: https://forms.gle/65Jd3JPHHcQadL3h7\n\uD83D\uDD25 Tham gia hành trình, bạn sẽ nhận được:\n\uD83E\uDD1F Cơ hội để có một cái nhìn rõ nét về bước đầu cho ngành Học Máy và Trí Tuệ Nhân Tạo.\n\uD83E\uDD1FĐược huấn luyện bởi 3 Google Developer Expert mảng Học Máy và nhận chứng nhận tham gia và các phần quà khác.\n\uD83E\uDD1FĐược lắng nghe những chia sẻ vô cùng thực tế từ đội ngũ những người có chuyên môn cao trong lĩnh vực Học máy và AI.\n\uD83C\uDF81 Ngoài ra còn có thêm nhiều phần quà hấp dẫn và một bất ngờ nho nhỏ dành cho những bạn tham gia workshop nữa đó!\n⭕️Thông tin về buổi workshop:\n⏱ Timeline sự kiện: 9am - 4pm, ngày 10/4/2021\n- 8h45 - 9h30: Check-in sự kiện.\n- 9h30 - 10h00: Giới thiệu về Học máy, Trí tuệ Nhân tạo và các tài nguyên liên quan.\n- 10h00 - 12h00: Workshop: Căn bản về Học Máy và Trí Tuệ Nhân Tạo.\n- 12h - 13h30: Nghỉ trưa.\n- 13h30 - 15h30: Các bạn chọn 1 trong 2 workshop dưới đây để tham gia:\n+ Demo Question Answering\n+ Demo Image Captioning\n- 15h30 - 16h00: Chia tay, trao quà và certificate\n\uD83D\uDD3B Địa điểm: Trung tâm Đổi mới sáng tạo Quốc gia - NIC, Bộ Kế hoạch và Đầu tư, ngõ 7 Tôn Thất Thuyết, Cầu Giấy, Hà Nội.\n\uD83E\uDD70 Hẹn gặp tất cả các bạn tại buổi workshop!",
+    "location": {
+      "name": "National Innovation Center",
+      "address": "Ngõ 7, Tôn Thất Thuyết, Hà Nội"
+    },
+    "organizers": [
+      "GDSCxHUST",
+      "GDG Vietnam Webinar",
+      "GDG Hanoi",
+      "Tensorflow Vietnam",
+      "Vietnam National Innovation Center"
+    ],
+    "guests": [
+      {
+        "avatarUrl": "https://i.postimg.cc/XJzRSQT9/Anh-B-nh.png",
+        "name": "Nguyễn Thái Bình",
+        "role": "speaker",
+        "company": "VinBrain, GDE ML"
+      },
+      {
+        "avatarUrl": "https://i.postimg.cc/9F5WDQnZ/Nguyen-Thanh-Ngan-removebg-preview.png",
+        "name": "Nguyễn Thanh Ngân",
+        "role": "NLP Expert"
+      },
+      {
+        "avatarUrl": "https://i.postimg.cc/JhN1cVHt/BaNgoc-1.png",
+        "name": "Bá Ngọc",
+        "role": "speaker",
+        "company": "Founder VietAI, GDE ML"
+      },
+      {
+        "avatarUrl": "https://i.postimg.cc/3xr6fsqd/BaoDai.png",
+        "name": "Bảo Đại",
+        "role": "speaker",
+        "company": "Nhạc sĩ & Kỹ sư AI"
+      },
+      {
+        "avatarUrl": "https://i.postimg.cc/8zXN6rrh/D7-C9-FD8-E-99-B6-4673-8608-3-B05-DBF5-EBFE.jpg",
+        "name": "Linh Cam Nhung",
+        "role": "host",
+        "company": ""
+      }
+    ],
+    "eventUrl": {
+      "info": "https://www.facebook.com/events/267656884814146",
+      "register": "https://forms.gle/65Jd3JPHHcQadL3h7"
+    }
+  },
+  {
+    "id":3,
+    "title": "Cùng nộp hồ sơ Google Developer Student Clubs",
+    "imageUrl": "https://i.postimg.cc/25DxXhyT/applygdsc.jpg",
+    "time": "2021-05-12T08:00:00Z",
+    "description": "CLB Sinh viên Lập trình Google (Google Developer Student Clubs / DSC) là chương trình của Google nhằm hỗ trợ các bạn sinh viên có hứng thú với công nghệ của Google. Chương trình có mặt tại Việt Nam từ năm 2019, chào đón sự tham gia của tất cả các bạn sinh viên tại Việt Nam từ bất cứ vùng miền nào.\nCùng tham gia buổi trực tuyến cùng nộp hồ sơ, vào lúc 8pm ngày 12/5/2021. Khi tham gia, các bạn có thể cùng mở hồ sơ, tham khảo và đặt câu hỏi cách điền thông tin, và nộp hồ sơ cùng nhau.\n\uD83D\uDD25 Buổi trực tuyến sẽ diễn ra qua Google Hangout. Thư mời tham gia buổi trực tuyến sẽ được gửi qua email.\nKhi trở thành ‘thuyền trưởng’ (lead) cho Google Developer Student Clubs tại trường của mình, bạn sẽ có cơ hội:\n\uD83D\uDD25 Được hỗ trợ và hướng dẫn từ Google\n\uD83D\uDD25 Thực hành và nâng cao kỹ năng công nghệ và lập trình\n\uD83D\uDD25 Kết nối cộng đồng sinh viên thế giới và các chuyên gia từ Google\n\uD83D\uDD25 Nâng cao kỹ năng lãnh đạo và tổ chức",
+    "location": {
+      "name": "Online",
+      "address": ""
+    },
+    "organizers": [
+      "GDSC Vietnam",
+      "GDSCxHUST",
+      "GDSCxFPTUDN",
+      "GDSCxHCMUT",
+      "GDSCxVNU",
+      "GDSCxDTU"
+    ],
+    "guests": [],
+    "eventUrl": {
+      "info": "https://www.facebook.com/events/475121070422890",
+      "register": "http://bit.ly/hosogdsc2021"
+    }
+  },
+  {
+    "id":4,
+    "title": "GDG DevFest Hanoi 2021 & Coding Challenge",
+    "imageUrl": "https://i.postimg.cc/dVyvwkFz/devfest.png",
+    "time": "2021-12-04T09:30:00Z",
+    "description": "GDG DEVFEST HANOI 2021 ĐANG TỚI GẦN !!\nGDG Hanoi đã trở lại với GDG DevFest Hanoi 2021- Ngày hội học hỏi, làm quen, săn giải thưởng và \"trình diễn\" năng lực lập trình siêu đẳng của bạn tới cộng đồng công nghệ!\nLink đăng ký miễn phí để tham gia CODING CHALLENGE: https://forms.gle/oejKCqpQxAVBZrBL7\nKhông chỉ vậy, GDG DevFest Hanoi 2021 mang đến rất nhiều phần quà hấp dẫn và thật chất dành cho các tín đồ công nghệ \uD83D\uDE09\nThời gian:\n- 27/11/2021: Coding challenge hình thức Cá nhân và Networking\n- 04/12/2021: Coding chalenge hình thức Đội thi & Session Công nghê cùng các Googlers\nHình thức: Trực tuyến\nSự kiện sẽ được cập nhật chi tiết trong những ngày tới.",
+    "location": {
+      "name": "Online",
+      "address": ""
+    },
+    "organizers": ["GDG Hanoi", "GDSCxHUST"],
+    "guests": [],
+    "eventUrl": {
+      "info": "https://www.facebook.com/events/465139854916575",
+      "register": "https://forms.gle/oejKCqpQxAVBZrBL7"
+    }
+  }
+]
+
+
+
+
