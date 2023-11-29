@@ -6,11 +6,11 @@ import styles from "./header_item.module.css";
 import Image from "next/image";
 
 const HeaderItem = (props) => {
-  const generationList = props.generationList.map((e, index) => (
-    <Link href={"/members/gen/" + e} key={index}>
-      <a>Gen {e}</a>
-    </Link>
-  ));
+  // const generationList = props.generationList.map((e, index) => (
+  //   <Link href={"/members/gen/" + e} key={index}>
+  //     <a>Gen {e}</a>
+  //   </Link>
+  // ));
   const router = useRouter();
   const pathName = router.pathname;
   const { menuResponse, changeMenuStatus } = props;
